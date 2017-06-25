@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="OfferAppModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="OfferAppModelStoreContainer">
+          <EntitySet Name="ConversationOfferSetting" EntityType="OfferAppModel.Store.ConversationOfferSetting" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="NegotiationOfferSetting" EntityType="OfferAppModel.Store.NegotiationOfferSetting" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__Conversat__Negot__20C1E124" Association="OfferAppModel.Store.FK__Conversat__Negot__20C1E124">
+            <End Role="NegotiationOfferSetting" EntitySet="NegotiationOfferSetting" />
+            <End Role="ConversationOfferSetting" EntitySet="ConversationOfferSetting" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ConversationOfferSetting">
+          <Key>
+            <PropertyRef Name="ConversationOfferSettingID" />
+          </Key>
+          <Property Name="ConversationOfferSettingID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="NegotiationOfferSettingID" Type="uniqueidentifier" />
+          <Property Name="ConversationID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="BaseOfferTypeID" Type="int" />
+          <Property Name="TargetTypeID" Type="int" />
+          <Property Name="TargetValue" Type="decimal" />
+          <Property Name="Deleted" Type="bit" />
+          <Property Name="DeletedBy" Type="uniqueidentifier" />
+          <Property Name="DeletedOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="NegotiationOfferSetting">
+          <Key>
+            <PropertyRef Name="NegotiationOfferSettingID" />
+          </Key>
+          <Property Name="NegotiationOfferSettingID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="NegotiationID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="BaseOfferTypeID" Type="int" />
+          <Property Name="TargetTypeID" Type="int" />
+          <Property Name="TargetValue" Type="decimal" />
+          <Property Name="Deleted" Type="bit" />
+          <Property Name="DeletedBy" Type="uniqueidentifier" />
+          <Property Name="DeletedOn" Type="datetime" />
+        </EntityType>
+        <Association Name="FK__Conversat__Negot__20C1E124">
+          <End Role="NegotiationOfferSetting" Type="OfferAppModel.Store.NegotiationOfferSetting" Multiplicity="0..1" />
+          <End Role="ConversationOfferSetting" Type="OfferAppModel.Store.ConversationOfferSetting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NegotiationOfferSetting">
+              <PropertyRef Name="NegotiationOfferSettingID" />
+            </Principal>
+            <Dependent Role="ConversationOfferSetting">
+              <PropertyRef Name="NegotiationOfferSettingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="uspConversationOfferSettingDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ConversationOfferSettingID" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="uspConversationOfferSettingInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ConversationOfferSettingID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="NegotiationOfferSettingID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="ConversationID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="BaseOfferTypeID" Type="int" Mode="In" />
+          <Parameter Name="TargetTypeID" Type="int" Mode="In" />
+          <Parameter Name="TargetValue" Type="decimal" Mode="In" />
+          <Parameter Name="Deleted" Type="bit" Mode="In" />
+          <Parameter Name="DeletedBy" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="DeletedOn" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="uspConversationOfferSettingSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ConversationOfferSettingID" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="uspConversationOfferSettingUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ConversationOfferSettingID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="NegotiationOfferSettingID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="ConversationID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="BaseOfferTypeID" Type="int" Mode="In" />
+          <Parameter Name="TargetTypeID" Type="int" Mode="In" />
+          <Parameter Name="TargetValue" Type="decimal" Mode="In" />
+          <Parameter Name="Deleted" Type="bit" Mode="In" />
+          <Parameter Name="DeletedBy" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="DeletedOn" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="uspNegotiationOfferSettingDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NegotiationOfferSettingID" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="uspNegotiationOfferSettingInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NegotiationOfferSettingID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="NegotiationID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="BaseOfferTypeID" Type="int" Mode="In" />
+          <Parameter Name="TargetTypeID" Type="int" Mode="In" />
+          <Parameter Name="TargetValue" Type="decimal" Mode="In" />
+          <Parameter Name="Deleted" Type="bit" Mode="In" />
+          <Parameter Name="DeletedBy" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="DeletedOn" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="uspNegotiationOfferSettingSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NegotiationOfferSettingID" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="uspNegotiationOfferSettingUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NegotiationOfferSettingID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="NegotiationID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="BaseOfferTypeID" Type="int" Mode="In" />
+          <Parameter Name="TargetTypeID" Type="int" Mode="In" />
+          <Parameter Name="TargetValue" Type="decimal" Mode="In" />
+          <Parameter Name="Deleted" Type="bit" Mode="In" />
+          <Parameter Name="DeletedBy" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="DeletedOn" Type="datetime" Mode="In" />
+        </Function>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OfferAppModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="OfferAppEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ConversationOfferSettings" EntityType="OfferAppModel.ConversationOfferSetting" />
+          <EntitySet Name="NegotiationOfferSettings" EntityType="OfferAppModel.NegotiationOfferSetting" />
+          <AssociationSet Name="FK__Conversat__Negot__20C1E124" Association="OfferAppModel.FK__Conversat__Negot__20C1E124">
+            <End Role="NegotiationOfferSetting" EntitySet="NegotiationOfferSettings" />
+            <End Role="ConversationOfferSetting" EntitySet="ConversationOfferSettings" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="ConversationOfferSetting">
+          <Key>
+            <PropertyRef Name="ConversationOfferSettingID" />
+          </Key>
+          <Property Name="ConversationOfferSettingID" Type="Guid" Nullable="false" />
+          <Property Name="NegotiationOfferSettingID" Type="Guid" />
+          <Property Name="ConversationID" Type="Guid" Nullable="false" />
+          <Property Name="BaseOfferTypeID" Type="Int32" />
+          <Property Name="TargetTypeID" Type="Int32" />
+          <Property Name="TargetValue" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Deleted" Type="Boolean" />
+          <Property Name="DeletedBy" Type="Guid" />
+          <Property Name="DeletedOn" Type="DateTime" />
+          <NavigationProperty Name="NegotiationOfferSetting" Relationship="OfferAppModel.FK__Conversat__Negot__20C1E124" FromRole="ConversationOfferSetting" ToRole="NegotiationOfferSetting" />
+        </EntityType>
+        <EntityType Name="NegotiationOfferSetting">
+          <Key>
+            <PropertyRef Name="NegotiationOfferSettingID" />
+          </Key>
+          <Property Name="NegotiationOfferSettingID" Type="Guid" Nullable="false" />
+          <Property Name="NegotiationID" Type="Guid" Nullable="false" />
+          <Property Name="BaseOfferTypeID" Type="Int32" />
+          <Property Name="TargetTypeID" Type="Int32" />
+          <Property Name="TargetValue" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Deleted" Type="Boolean" />
+          <Property Name="DeletedBy" Type="Guid" />
+          <Property Name="DeletedOn" Type="DateTime" />
+          <NavigationProperty Name="ConversationOfferSettings" Relationship="OfferAppModel.FK__Conversat__Negot__20C1E124" FromRole="NegotiationOfferSetting" ToRole="ConversationOfferSetting" />
+        </EntityType>
+        <Association Name="FK__Conversat__Negot__20C1E124">
+          <End Role="NegotiationOfferSetting" Type="OfferAppModel.NegotiationOfferSetting" Multiplicity="0..1" />
+          <End Role="ConversationOfferSetting" Type="OfferAppModel.ConversationOfferSetting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NegotiationOfferSetting">
+              <PropertyRef Name="NegotiationOfferSettingID" />
+            </Principal>
+            <Dependent Role="ConversationOfferSetting">
+              <PropertyRef Name="NegotiationOfferSettingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OfferAppModelStoreContainer" CdmEntityContainer="OfferAppEntities">
+          <EntitySetMapping Name="ConversationOfferSettings"><EntityTypeMapping TypeName="OfferAppModel.ConversationOfferSetting"><MappingFragment StoreEntitySet="ConversationOfferSetting">
+            <ScalarProperty Name="ConversationOfferSettingID" ColumnName="ConversationOfferSettingID" />
+            <ScalarProperty Name="NegotiationOfferSettingID" ColumnName="NegotiationOfferSettingID" />
+            <ScalarProperty Name="ConversationID" ColumnName="ConversationID" />
+            <ScalarProperty Name="BaseOfferTypeID" ColumnName="BaseOfferTypeID" />
+            <ScalarProperty Name="TargetTypeID" ColumnName="TargetTypeID" />
+            <ScalarProperty Name="TargetValue" ColumnName="TargetValue" />
+            <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+            <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+            <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+          </MappingFragment></EntityTypeMapping>
+            <EntityTypeMapping TypeName="OfferAppModel.ConversationOfferSetting">
+              <ModificationFunctionMapping>
+                <DeleteFunction FunctionName="OfferAppModel.Store.uspConversationOfferSettingDelete">
+                  <ScalarProperty Name="ConversationOfferSettingID" ParameterName="ConversationOfferSettingID" />
+                </DeleteFunction>
+                <UpdateFunction FunctionName="OfferAppModel.Store.uspConversationOfferSettingUpdate">
+                  <ScalarProperty Name="DeletedOn" ParameterName="DeletedOn" Version="Current" />
+                  <ScalarProperty Name="DeletedBy" ParameterName="DeletedBy" Version="Current" />
+                  <ScalarProperty Name="Deleted" ParameterName="Deleted" Version="Current" />
+                  <ScalarProperty Name="TargetValue" ParameterName="TargetValue" Version="Current" />
+                  <ScalarProperty Name="TargetTypeID" ParameterName="TargetTypeID" Version="Current" />
+                  <ScalarProperty Name="BaseOfferTypeID" ParameterName="BaseOfferTypeID" Version="Current" />
+                  <ScalarProperty Name="ConversationID" ParameterName="ConversationID" Version="Current" />
+                  <ScalarProperty Name="NegotiationOfferSettingID" ParameterName="NegotiationOfferSettingID" Version="Current" />
+                  <ScalarProperty Name="ConversationOfferSettingID" ParameterName="ConversationOfferSettingID" Version="Current" />
+                </UpdateFunction>
+                <InsertFunction FunctionName="OfferAppModel.Store.uspConversationOfferSettingInsert">
+                  <ScalarProperty Name="DeletedOn" ParameterName="DeletedOn" />
+                  <ScalarProperty Name="DeletedBy" ParameterName="DeletedBy" />
+                  <ScalarProperty Name="Deleted" ParameterName="Deleted" />
+                  <ScalarProperty Name="TargetValue" ParameterName="TargetValue" />
+                  <ScalarProperty Name="TargetTypeID" ParameterName="TargetTypeID" />
+                  <ScalarProperty Name="BaseOfferTypeID" ParameterName="BaseOfferTypeID" />
+                  <ScalarProperty Name="ConversationID" ParameterName="ConversationID" />
+                  <ScalarProperty Name="NegotiationOfferSettingID" ParameterName="NegotiationOfferSettingID" />
+                  <ScalarProperty Name="ConversationOfferSettingID" ParameterName="ConversationOfferSettingID" />
+                </InsertFunction>
+              </ModificationFunctionMapping>
+            </EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="NegotiationOfferSettings"><EntityTypeMapping TypeName="OfferAppModel.NegotiationOfferSetting"><MappingFragment StoreEntitySet="NegotiationOfferSetting">
+            <ScalarProperty Name="NegotiationOfferSettingID" ColumnName="NegotiationOfferSettingID" />
+            <ScalarProperty Name="NegotiationID" ColumnName="NegotiationID" />
+            <ScalarProperty Name="BaseOfferTypeID" ColumnName="BaseOfferTypeID" />
+            <ScalarProperty Name="TargetTypeID" ColumnName="TargetTypeID" />
+            <ScalarProperty Name="TargetValue" ColumnName="TargetValue" />
+            <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+            <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+            <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+          </MappingFragment></EntityTypeMapping>
+            <EntityTypeMapping TypeName="OfferAppModel.NegotiationOfferSetting">
+              <ModificationFunctionMapping>
+                <DeleteFunction FunctionName="OfferAppModel.Store.uspNegotiationOfferSettingDelete">
+                  <ScalarProperty Name="NegotiationOfferSettingID" ParameterName="NegotiationOfferSettingID" />
+                </DeleteFunction>
+                <UpdateFunction FunctionName="OfferAppModel.Store.uspNegotiationOfferSettingUpdate">
+                  <ScalarProperty Name="DeletedOn" ParameterName="DeletedOn" Version="Current" />
+                  <ScalarProperty Name="DeletedBy" ParameterName="DeletedBy" Version="Current" />
+                  <ScalarProperty Name="Deleted" ParameterName="Deleted" Version="Current" />
+                  <ScalarProperty Name="TargetValue" ParameterName="TargetValue" Version="Current" />
+                  <ScalarProperty Name="TargetTypeID" ParameterName="TargetTypeID" Version="Current" />
+                  <ScalarProperty Name="BaseOfferTypeID" ParameterName="BaseOfferTypeID" Version="Current" />
+                  <ScalarProperty Name="NegotiationID" ParameterName="NegotiationID" Version="Current" />
+                  <ScalarProperty Name="NegotiationOfferSettingID" ParameterName="NegotiationOfferSettingID" Version="Current" />
+                </UpdateFunction>
+                <InsertFunction FunctionName="OfferAppModel.Store.uspNegotiationOfferSettingInsert">
+                  <ScalarProperty Name="DeletedOn" ParameterName="DeletedOn" />
+                  <ScalarProperty Name="DeletedBy" ParameterName="DeletedBy" />
+                  <ScalarProperty Name="Deleted" ParameterName="Deleted" />
+                  <ScalarProperty Name="TargetValue" ParameterName="TargetValue" />
+                  <ScalarProperty Name="TargetTypeID" ParameterName="TargetTypeID" />
+                  <ScalarProperty Name="BaseOfferTypeID" ParameterName="BaseOfferTypeID" />
+                  <ScalarProperty Name="NegotiationID" ParameterName="NegotiationID" />
+                  <ScalarProperty Name="NegotiationOfferSettingID" ParameterName="NegotiationOfferSettingID" />
+                </InsertFunction>
+              </ModificationFunctionMapping>
+            </EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="OfferAppModel">
+        <EntityTypeShape EntityType="OfferAppModel.ConversationOfferSetting" Width="1.5" PointX="3" PointY="4" Height="3.3263964843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="OfferAppModel.NegotiationOfferSetting" Width="1.5" PointX="6" PointY="4.125" Height="3.1340950520833335" IsExpanded="true" />
+        <AssociationConnector Association="OfferAppModel.FK__Conversat__Negot__20C1E124" ManuallyRouted="false">
+          <ConnectorPoint PointX="6" PointY="5.660795026041666" />
+          <ConnectorPoint PointX="4.5" PointY="5.660795026041666" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

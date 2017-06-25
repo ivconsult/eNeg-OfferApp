@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/citPOINT.PrefApp.Data.Web.Complete" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/citPOINT.PrefApp.Data.Web.Complete" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:9002/Services/citPOINT-PrefApp-Data-Web-PrefAppService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ExpectedTarget">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" type="tns:Status" />
+      <xs:element minOccurs="0" name="Target" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExpectedTarget" nillable="true" type="tns:ExpectedTarget" />
+  <xs:simpleType name="Status">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="Failed" />
+      <xs:enumeration value="DateOutOfPeriod" />
+      <xs:enumeration value="NoSettings" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Status" nillable="true" type="tns:Status" />
+  <xs:complexType name="CompletePreferenceSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MaxPercentage" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PreferenceSetID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompletePreferenceSet" nillable="true" type="tns:CompletePreferenceSet" />
+  <xs:complexType name="CompleteIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IssueID" type="ser:guid" />
+      <xs:element minOccurs="0" name="IssueType" type="tns:CompleteIssueType" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PreferenceSetID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Rank" type="xs:int" />
+      <xs:element minOccurs="0" name="Score" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompleteIssue" nillable="true" type="tns:CompleteIssue" />
+  <xs:simpleType name="CompleteIssueType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Numeric" />
+      <xs:enumeration value="Option" />
+      <xs:enumeration value="LaterRated" />
+      <xs:enumeration value="NotRated" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CompleteIssueType" nillable="true" type="tns:CompleteIssueType" />
+  <xs:complexType name="CompleteOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IssueID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OptionID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Rate" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompleteOption" nillable="true" type="tns:CompleteOption" />
+  <xs:complexType name="CompleteNumeric">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IssueID" type="ser:guid" />
+      <xs:element minOccurs="0" name="MaxOperatorBetter" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaxOperatorEqual" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaxOperatorWorse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaximumValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MinOperatorBetter" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MinOperatorEqual" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MinOperatorWorse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MinimumValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OptimumValueEnd" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OptimumValueStart" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TopMax" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TopMin" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompleteNumeric" nillable="true" type="tns:CompleteNumeric" />
+  <xs:complexType name="OfferItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IssueID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OptionID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Percentage" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OfferItem" nillable="true" type="tns:OfferItem" />
+  <xs:simpleType name="OfferType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Own" />
+      <xs:enumeration value="Counterpart" />
+      <xs:enumeration value="Mixed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OfferType" nillable="true" type="tns:OfferType" />
+  <xs:complexType name="ArrayOfExpectedTarget">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpectedTarget" nillable="true" type="tns:ExpectedTarget" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpectedTarget" nillable="true" type="tns:ArrayOfExpectedTarget" />
+  <xs:complexType name="ArrayOfCompletePreferenceSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompletePreferenceSet" nillable="true" type="tns:CompletePreferenceSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompletePreferenceSet" nillable="true" type="tns:ArrayOfCompletePreferenceSet" />
+  <xs:complexType name="ArrayOfOfferItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OfferItem" nillable="true" type="tns:OfferItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOfferItem" nillable="true" type="tns:ArrayOfOfferItem" />
+</xs:schema>

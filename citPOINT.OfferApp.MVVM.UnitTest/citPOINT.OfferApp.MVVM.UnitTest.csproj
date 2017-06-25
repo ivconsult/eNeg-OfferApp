@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{10FD3682-0E27-479C-8C8C-D9E490E6993A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>citPOINT.OfferApp.MVVM.UnitTest</RootNamespace>
+    <AssemblyName>citPOINT.OfferApp.MVVM.UnitTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="citPOINT.eNeg.Common">
+      <HintPath>..\Assemblies\citPOINT.eNeg.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras.SL4">
+      <HintPath>..\..\citPOINT.eNeg\Assemblies\GalaSoft.MvvmLight.Extras.SL4.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.SL4">
+      <HintPath>..\..\citPOINT.eNeg\Assemblies\GalaSoft.MvvmLight.SL4.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.DomainServices.Client">
+      <HintPath>..\Assemblies\System.ServiceModel.DomainServices.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Client.Web">
+      <HintPath>..\Assemblies\System.ServiceModel.DomainServices.Client.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows">
+      <HintPath>..\Assemblies\System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Browser">
+      <HintPath>..\Assemblies\System.Windows.Browser.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls">
+      <HintPath>..\..\citPOINT.eNeg\citPoint.eNeg.Client\Bin\Debug\System.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\citPOINT.eNeg\Assemblies\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.XML" />
+    <Reference Include="Telerik.Windows.Controls.Charting, Version=2010.2.812.1040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assemblies\Telerik.Windows.Controls.Charting.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mocks\MockGenerateOfferModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View Model Unit Test\GenerateOfferViewModel.Test.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\citPOINT.OfferApp.Client\citPOINT.OfferApp.Client.csproj">
+      <Project>{60ACEB97-67E1-415C-BFF6-BC0C6750F658}</Project>
+      <Name>citPOINT.OfferApp.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\citPOINT.OfferApp.Common\citPOINT.OfferApp.Common.csproj">
+      <Project>{6955AC44-F84E-4BD8-BAF9-E034FD305DF2}</Project>
+      <Name>citPOINT.OfferApp.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\citPOINT.OfferApp.Data\citPOINT.OfferApp.Data.csproj">
+      <Project>{87A51949-5C8A-40BB-AD21-B4CB91714122}</Project>
+      <Name>citPOINT.OfferApp.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\citPOINT.OfferApp.ViewModel\citPOINT.OfferApp.ViewModel.csproj">
+      <Project>{AB22B9FB-1FB8-4D07-9A6A-67602F2A7ECF}</Project>
+      <Name>citPOINT.OfferApp.ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

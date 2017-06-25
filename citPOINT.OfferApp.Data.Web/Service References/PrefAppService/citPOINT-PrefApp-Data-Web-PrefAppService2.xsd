@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/citPOINT.PrefApp.Data.Web" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/citPOINT.PrefApp.Data.Web" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:9002/Services/citPOINT-PrefApp-Data-Web-PrefAppService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="NegConversation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConversationID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NegConversationID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Percentage" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PreferenceSetNegID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NegConversation" nillable="true" type="tns:NegConversation" />
+  <xs:complexType name="NumericIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IssueID" type="ser:guid" />
+      <xs:element minOccurs="0" name="MaxOperatorBetter" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaxOperatorEqual" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaxOperatorWorse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaximumOperator" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="MaximumValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MinOperatorBetter" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MinOperatorEqual" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MinOperatorWorse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MinimumOperator" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="MinimumValue" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NumericIssueID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OptimumValueEnd" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OptimumValueStart" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NumericIssue" nillable="true" type="tns:NumericIssue" />
+  <xs:complexType name="OptionIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsNewOption" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSelected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IssueID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OptionIssueID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OptionIssueValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OptionIssueWeight" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OptionIssue" nillable="true" type="tns:OptionIssue" />
+  <xs:complexType name="PreferenceSetNeg">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsClosed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NegID" type="ser:guid" />
+      <xs:element minOccurs="0" name="NegotiationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Percentage" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PreferenceSetID" type="ser:guid" />
+      <xs:element minOccurs="0" name="PreferenceSetNegID" type="ser:guid" />
+      <xs:element minOccurs="0" name="StatusID" nillable="true" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PreferenceSetNeg" nillable="true" type="tns:PreferenceSetNeg" />
+  <xs:complexType name="PreferenceSetOrganization">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Deleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrganizationID" type="ser:guid" />
+      <xs:element minOccurs="0" name="PreferenceSetID" type="ser:guid" />
+      <xs:element minOccurs="0" name="PreferenceSetOrganizationID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PreferenceSetOrganization" nillable="true" type="tns:PreferenceSetOrganization" />
+  <xs:complexType name="PreferenceSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Checkvariation" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsNewPreferenceSet" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MainPreferenceSetID" type="ser:guid" />
+      <xs:element minOccurs="0" name="MaxPercentage" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PreferenceSetID" type="ser:guid" />
+      <xs:element minOccurs="0" name="PreferenceSetName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="VariationValue" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PreferenceSet" nillable="true" type="tns:PreferenceSet" />
+  <xs:complexType name="Issue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsNewIssue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSelected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IssueID" type="ser:guid" />
+      <xs:element minOccurs="0" name="IssueName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IssueTypeID" type="ser:guid" />
+      <xs:element minOccurs="0" name="IssueWeight" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PreferenceSetID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Issue" nillable="true" type="tns:Issue" />
+  <xs:complexType name="CoordinatesPoints">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CoordinatesPointsID" type="ser:guid" />
+      <xs:element minOccurs="0" name="XAxisPoint" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="YAxisPoint" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CoordinatesPoints" nillable="true" type="tns:CoordinatesPoints" />
+  <xs:complexType name="IssueHistoryResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AverageScore" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IssueName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rank" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TimesUsed" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IssueHistoryResult" nillable="true" type="tns:IssueHistoryResult" />
+  <xs:complexType name="IssueStatisticalsResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IssueName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rank" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TimesUsed" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IssueStatisticalsResult" nillable="true" type="tns:IssueStatisticalsResult" />
+  <xs:complexType name="LaterRatedIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IssueID" type="ser:guid" />
+      <xs:element minOccurs="0" name="LaterRatedIssueID" type="ser:guid" />
+      <xs:element minOccurs="0" name="LaterRatedIssueValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LaterRatedIssueWeight" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LaterRatedIssue" nillable="true" type="tns:LaterRatedIssue" />
+  <xs:complexType name="Organization">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OrganizationID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrganizationName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Organization" nillable="true" type="tns:Organization" />
+  <xs:complexType name="Negotiation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsClosed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NegotiationID" type="ser:guid" />
+      <xs:element minOccurs="0" name="NegotiationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Negotiators" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusID" nillable="true" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Negotiation" nillable="true" type="tns:Negotiation" />
+  <xs:complexType name="Conversation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConversationID" type="ser:guid" />
+      <xs:element minOccurs="0" name="ConversationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NegotiationID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Conversation" nillable="true" type="tns:Conversation" />
+  <xs:complexType name="Message">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConversationID" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsSent" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MessageContent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MessageID" type="ser:guid" />
+      <xs:element minOccurs="0" name="MessageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageReceiver" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageSender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageSubject" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Message" nillable="true" type="tns:Message" />
+  <xs:complexType name="ConversationPeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxConversationDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MinConversationDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConversationPeriod" nillable="true" type="tns:ConversationPeriod" />
+  <xs:complexType name="LastOfferDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="OfferDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Percentage" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LastOfferDetails" nillable="true" type="tns:LastOfferDetails" />
+  <xs:complexType name="ActionType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActionName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActionTypeID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActionType" nillable="true" type="tns:ActionType" />
+  <xs:complexType name="ConversationMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConversationMessageID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsExceedVariation" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSent" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MessageID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="NegConversationID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Percentage" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RatedDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConversationMessage" nillable="true" type="tns:ConversationMessage" />
+  <xs:complexType name="History">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActionDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ActionTypeID" type="ser:guid" />
+      <xs:element minOccurs="0" name="DoneBy" type="ser:guid" />
+      <xs:element minOccurs="0" name="NewValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OldValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SN" type="ser:guid" />
+      <xs:element minOccurs="0" name="TableName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="History" nillable="true" type="tns:History" />
+  <xs:complexType name="IssueType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IssueTypeID" type="ser:guid" />
+      <xs:element minOccurs="0" name="IssueTypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IssueType" nillable="true" type="tns:IssueType" />
+  <xs:complexType name="MainPreferenceSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MainPreferenceSetID" type="ser:guid" />
+      <xs:element minOccurs="0" name="MainPreferenceSetName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MainPreferenceSet" nillable="true" type="tns:MainPreferenceSet" />
+  <xs:complexType name="MessageIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConversationMessageID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IssueID" type="ser:guid" />
+      <xs:element minOccurs="0" name="MessageIssueID" type="ser:guid" />
+      <xs:element minOccurs="0" name="NumericRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Score" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MessageIssue" nillable="true" type="tns:MessageIssue" />
+  <xs:complexType name="MessageLaterRatedIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LaterRatedIssueID" type="ser:guid" />
+      <xs:element minOccurs="0" name="MessageIssueID" type="ser:guid" />
+      <xs:element minOccurs="0" name="MessageLaterRatedIssueID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MessageLaterRatedIssue" nillable="true" type="tns:MessageLaterRatedIssue" />
+  <xs:complexType name="MessageOptionIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MessageIssueID" type="ser:guid" />
+      <xs:element minOccurs="0" name="MessageOptionIssueID" type="ser:guid" />
+      <xs:element minOccurs="0" name="OptionIssueID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MessageOptionIssue" nillable="true" type="tns:MessageOptionIssue" />
+  <xs:complexType name="ArrayOfNegConversation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NegConversation" nillable="true" type="tns:NegConversation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNegConversation" nillable="true" type="tns:ArrayOfNegConversation" />
+  <xs:complexType name="ArrayOfNumericIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NumericIssue" nillable="true" type="tns:NumericIssue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNumericIssue" nillable="true" type="tns:ArrayOfNumericIssue" />
+  <xs:complexType name="ArrayOfOptionIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OptionIssue" nillable="true" type="tns:OptionIssue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOptionIssue" nillable="true" type="tns:ArrayOfOptionIssue" />
+  <xs:complexType name="ArrayOfPreferenceSetNeg">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PreferenceSetNeg" nillable="true" type="tns:PreferenceSetNeg" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPreferenceSetNeg" nillable="true" type="tns:ArrayOfPreferenceSetNeg" />
+  <xs:complexType name="ArrayOfPreferenceSetOrganization">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PreferenceSetOrganization" nillable="true" type="tns:PreferenceSetOrganization" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPreferenceSetOrganization" nillable="true" type="tns:ArrayOfPreferenceSetOrganization" />
+  <xs:complexType name="ArrayOfPreferenceSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PreferenceSet" nillable="true" type="tns:PreferenceSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPreferenceSet" nillable="true" type="tns:ArrayOfPreferenceSet" />
+  <xs:complexType name="ArrayOfIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Issue" nillable="true" type="tns:Issue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIssue" nillable="true" type="tns:ArrayOfIssue" />
+  <xs:complexType name="ArrayOfCoordinatesPoints">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CoordinatesPoints" nillable="true" type="tns:CoordinatesPoints" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCoordinatesPoints" nillable="true" type="tns:ArrayOfCoordinatesPoints" />
+  <xs:complexType name="ArrayOfIssueHistoryResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IssueHistoryResult" nillable="true" type="tns:IssueHistoryResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIssueHistoryResult" nillable="true" type="tns:ArrayOfIssueHistoryResult" />
+  <xs:complexType name="ArrayOfIssueStatisticalsResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IssueStatisticalsResult" nillable="true" type="tns:IssueStatisticalsResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIssueStatisticalsResult" nillable="true" type="tns:ArrayOfIssueStatisticalsResult" />
+  <xs:complexType name="ArrayOfLaterRatedIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LaterRatedIssue" nillable="true" type="tns:LaterRatedIssue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLaterRatedIssue" nillable="true" type="tns:ArrayOfLaterRatedIssue" />
+  <xs:complexType name="ArrayOfOrganization">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Organization" nillable="true" type="tns:Organization" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrganization" nillable="true" type="tns:ArrayOfOrganization" />
+  <xs:complexType name="ArrayOfNegotiation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Negotiation" nillable="true" type="tns:Negotiation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNegotiation" nillable="true" type="tns:ArrayOfNegotiation" />
+  <xs:complexType name="ArrayOfConversation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Conversation" nillable="true" type="tns:Conversation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConversation" nillable="true" type="tns:ArrayOfConversation" />
+  <xs:complexType name="ArrayOfMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Message" nillable="true" type="tns:Message" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMessage" nillable="true" type="tns:ArrayOfMessage" />
+  <xs:complexType name="ArrayOfConversationPeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConversationPeriod" nillable="true" type="tns:ConversationPeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConversationPeriod" nillable="true" type="tns:ArrayOfConversationPeriod" />
+  <xs:complexType name="ArrayOfLastOfferDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LastOfferDetails" nillable="true" type="tns:LastOfferDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLastOfferDetails" nillable="true" type="tns:ArrayOfLastOfferDetails" />
+  <xs:complexType name="ArrayOfActionType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActionType" nillable="true" type="tns:ActionType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActionType" nillable="true" type="tns:ArrayOfActionType" />
+  <xs:complexType name="ArrayOfConversationMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConversationMessage" nillable="true" type="tns:ConversationMessage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConversationMessage" nillable="true" type="tns:ArrayOfConversationMessage" />
+  <xs:complexType name="ArrayOfHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="History" nillable="true" type="tns:History" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistory" nillable="true" type="tns:ArrayOfHistory" />
+  <xs:complexType name="ArrayOfIssueType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IssueType" nillable="true" type="tns:IssueType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIssueType" nillable="true" type="tns:ArrayOfIssueType" />
+  <xs:complexType name="ArrayOfMainPreferenceSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MainPreferenceSet" nillable="true" type="tns:MainPreferenceSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMainPreferenceSet" nillable="true" type="tns:ArrayOfMainPreferenceSet" />
+  <xs:complexType name="ArrayOfMessageIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MessageIssue" nillable="true" type="tns:MessageIssue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMessageIssue" nillable="true" type="tns:ArrayOfMessageIssue" />
+  <xs:complexType name="ArrayOfMessageLaterRatedIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MessageLaterRatedIssue" nillable="true" type="tns:MessageLaterRatedIssue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMessageLaterRatedIssue" nillable="true" type="tns:ArrayOfMessageLaterRatedIssue" />
+  <xs:complexType name="ArrayOfMessageOptionIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MessageOptionIssue" nillable="true" type="tns:MessageOptionIssue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMessageOptionIssue" nillable="true" type="tns:ArrayOfMessageOptionIssue" />
+</xs:schema>

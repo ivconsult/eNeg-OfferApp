@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:9006/Services/citPOINT-StrategyApp-Data-Web-StrategyAppService.svc?xsd=xsd3" namespace="DomainServices" />
+  <xs:import schemaLocation="http://localhost:9006/Services/citPOINT-StrategyApp-Data-Web-StrategyAppService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="GetConversationStrategySettings">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConversationStrategySettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="DomainServices" minOccurs="0" name="GetConversationStrategySettingsResult" nillable="true" type="q1:QueryResultOfConversationStrategySetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNegotiationStrategySettings">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNegotiationStrategySettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="DomainServices" minOccurs="0" name="GetNegotiationStrategySettingsResult" nillable="true" type="q2:QueryResultOfNegotiationStrategySetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStrategyTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStrategyTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="DomainServices" minOccurs="0" name="GetStrategyTypesResult" nillable="true" type="q3:QueryResultOfStrategyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNextExpectedTargetForNegotiation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="negotiationID" type="q4:guid" />
+        <xs:element minOccurs="0" name="maxPercentage" type="xs:decimal" />
+        <xs:element minOccurs="0" name="currentDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNextExpectedTargetForNegotiationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="DomainServices" minOccurs="0" name="GetNextExpectedTargetForNegotiationResult" nillable="true" type="q5:QueryResultOfExpectedTarget" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNextExpectedTargetForConversation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="negotiationID" type="q6:guid" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="conversationID" type="q7:guid" />
+        <xs:element minOccurs="0" name="maxPercentage" type="xs:decimal" />
+        <xs:element minOccurs="0" name="currentDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNextExpectedTargetForConversationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="DomainServices" minOccurs="0" name="GetNextExpectedTargetForConversationResult" nillable="true" type="q8:QueryResultOfExpectedTarget" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNegotiationStrategySettingsByNegID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="negotiationID" type="q9:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNegotiationStrategySettingsByNegIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="DomainServices" minOccurs="0" name="GetNegotiationStrategySettingsByNegIDResult" nillable="true" type="q10:QueryResultOfNegotiationStrategySetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNegotiationPeriod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="negotiationID" type="q11:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNegotiationPeriodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="DomainServices" minOccurs="0" name="GetNegotiationPeriodResult" nillable="true" type="q12:QueryResultOfConversationPeriod" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConversationStrategySettingsByConvID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="conversationID" type="q13:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConversationStrategySettingsByConvIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="DomainServices" minOccurs="0" name="GetConversationStrategySettingsByConvIDResult" nillable="true" type="q14:QueryResultOfConversationStrategySetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConversationPeriod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="conversationID" type="q15:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConversationPeriodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="DomainServices" minOccurs="0" name="GetConversationPeriodResult" nillable="true" type="q16:QueryResultOfConversationPeriod" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPreferenceSetForNegotiation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="negotiationID" type="q17:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPreferenceSetForNegotiationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="DomainServices" minOccurs="0" name="GetPreferenceSetForNegotiationResult" nillable="true" type="q18:QueryResultOfPreferenceSet" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastOfferForConversation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="conversationID" type="q19:guid" />
+        <xs:element minOccurs="0" name="isSent" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastOfferForConversationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="DomainServices" minOccurs="0" name="GetLastOfferForConversationResult" nillable="true" type="q20:QueryResultOfLastOfferDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitChanges">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="DomainServices" minOccurs="0" name="changeSet" nillable="true" type="q21:ArrayOfChangeSetEntry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitChangesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="DomainServices" minOccurs="0" name="SubmitChangesResult" nillable="true" type="q22:ArrayOfChangeSetEntry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

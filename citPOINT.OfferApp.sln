@@ -1,0 +1,291 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{1882AB08-37C7-4EE6-ABD4-073145BF5F09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{9D448CE4-F229-4F24-BE5F-B08B4AD70434}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{E2D39342-463D-4B2D-B95B-6D396E028DA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Testing", "Unit Testing", "{861B1940-FF36-4221-90C0-F6BA848A1713}"
+EndProject
+Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "citPOINT.OfferApp.DataBase", "citPOINT.OfferApp.DataBase\citPOINT.OfferApp.DataBase.dbproj", "{67CBC824-A49E-4E9B-A947-360F3DFE65C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "citPOINT.OfferApp.Common", "citPOINT.OfferApp.Common\citPOINT.OfferApp.Common.csproj", "{6955AC44-F84E-4BD8-BAF9-E034FD305DF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "citPOINT.OfferApp.Model", "citPOINT.OfferApp.Model\citPOINT.OfferApp.Model.csproj", "{3150E27B-735A-446F-B968-1E361F7D517C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "citPOINT.OfferApp.ViewModel", "citPOINT.OfferApp.ViewModel\citPOINT.OfferApp.ViewModel.csproj", "{AB22B9FB-1FB8-4D07-9A6A-67602F2A7ECF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "citPOINT.OfferApp.Client", "citPOINT.OfferApp.Client\citPOINT.OfferApp.Client.csproj", "{60ACEB97-67E1-415C-BFF6-BC0C6750F658}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5DEF2461-995C-4290-B230-8346476EFCE8} = {5DEF2461-995C-4290-B230-8346476EFCE8}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{B6F3C67C-E74C-4232-8060-8344521F7855}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "citPOINT.OfferApp.Data.Web", "citPOINT.OfferApp.Data.Web\citPOINT.OfferApp.Data.Web.csproj", "{073D3CBE-FD31-4100-99D0-DC40E2DAD066}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "citPOINT.OfferApp.Data", "citPOINT.OfferApp.Data\citPOINT.OfferApp.Data.csproj", "{87A51949-5C8A-40BB-AD21-B4CB91714122}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5DEF2461-995C-4290-B230-8346476EFCE8} = {5DEF2461-995C-4290-B230-8346476EFCE8}
+		{5DEF2461-995C-4290-B230-8346476EFCE8} = {5DEF2461-995C-4290-B230-8346476EFCE8}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {073D3CBE-FD31-4100-99D0-DC40E2DAD066}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "citPOINT.OfferApp.Web", "citPOINT.OfferApp.Web\citPOINT.OfferApp.Web.csproj", "{5DEF2461-995C-4290-B230-8346476EFCE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "citPoint.OfferApp.Data.Web.Test", "citPOINT.OfferApp.Data.Web.Test\citPoint.OfferApp.Data.Web.Test.csproj", "{BCDD0384-003B-4BA2-9779-56DB6B0038FD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5DEF2461-995C-4290-B230-8346476EFCE8} = {5DEF2461-995C-4290-B230-8346476EFCE8}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AEE06709-8351-42D2-8E11-0D24DB324342}"
+	ProjectSection(SolutionItems) = preProject
+		citPOINT.OfferApp.vsmdi = citPOINT.OfferApp.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assemblies", "Assemblies", "{3B3F9C66-AEB8-41A0-9A6D-CFFCB72F9679}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\Microsoft.Practices.Prism.dll = Assemblies\Microsoft.Practices.Prism.dll
+		Assemblies\Microsoft.Practices.Prism.MefExtensions.dll = Assemblies\Microsoft.Practices.Prism.MefExtensions.dll
+		Assemblies\Microsoft.Silverlight.Testing.dll = Assemblies\Microsoft.Silverlight.Testing.dll
+		Assemblies\Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.dll = Assemblies\Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.dll
+		Assemblies\silverPDF.dll = Assemblies\silverPDF.dll
+		Assemblies\System.ServiceModel.dll = Assemblies\System.ServiceModel.dll
+		Assemblies\System.ServiceModel.DomainServices.Client.dll = Assemblies\System.ServiceModel.DomainServices.Client.dll
+		Assemblies\System.ServiceModel.DomainServices.Client.Web.dll = Assemblies\System.ServiceModel.DomainServices.Client.Web.dll
+		Assemblies\System.Windows.Browser.dll = Assemblies\System.Windows.Browser.dll
+		Assemblies\System.Windows.Controls.dll = Assemblies\System.Windows.Controls.dll
+		Assemblies\System.Windows.dll = Assemblies\System.Windows.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "eNeg", "eNeg", "{B590B945-C928-4D0F-B5F1-99FE71A803F4}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\citPOINT.eNeg.Apps.Common.dll = Assemblies\citPOINT.eNeg.Apps.Common.dll
+		Assemblies\citPOINT.eNeg.Common.dll = Assemblies\citPOINT.eNeg.Common.dll
+		Assemblies\citPOINT.eNeg.Infrastructure.ClientSide.dll = Assemblies\citPOINT.eNeg.Infrastructure.ClientSide.dll
+		Assemblies\citPOINT.eNeg.Infrastructure.Common.dll = Assemblies\citPOINT.eNeg.Infrastructure.Common.dll
+		Assemblies\citPOINT.eNeg.Infrastructure.ServerSide.dll = Assemblies\citPOINT.eNeg.Infrastructure.ServerSide.dll
+		Assemblies\citPOINT.eNeg.Themes.dll = Assemblies\citPOINT.eNeg.Themes.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enterprise Library", "Enterprise Library", "{B4E95D2E-6F02-442D-A339-786B110B3DD6}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\Microsoft.Practices.EnterpriseLibrary.Common.dll = Assemblies\Microsoft.Practices.EnterpriseLibrary.Common.dll
+		Assemblies\Microsoft.Practices.EnterpriseLibrary.Data.dll = Assemblies\Microsoft.Practices.EnterpriseLibrary.Data.dll
+		Assemblies\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll = Assemblies\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+		Assemblies\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll = Assemblies\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+		Assemblies\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll = Assemblies\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll
+		Assemblies\Microsoft.Practices.EnterpriseLibrary.Logging.dll = Assemblies\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+		Assemblies\Microsoft.Practices.ServiceLocation.dll = Assemblies\Microsoft.Practices.ServiceLocation.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{AE2B647E-B3CD-40B3-B47F-9D357443584A}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\DanielVaughan.dll = Assemblies\DanielVaughan.dll
+		Assemblies\DanielVaughan.Logging.dll = Assemblies\DanielVaughan.Logging.dll
+		Assemblies\DanielVaughan.Logging.EnterpriseLibraryLogStrategy.dll = Assemblies\DanielVaughan.Logging.EnterpriseLibraryLogStrategy.dll
+		Assemblies\DanielVaughan.Logging.Silverlight.dll = Assemblies\DanielVaughan.Logging.Silverlight.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Silverlight", "Silverlight", "{8C3BC3D6-C86F-415A-BA36-F1A5B3AE4E9C}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\LogginSilverlight\DanielVaughan.dll = Assemblies\LogginSilverlight\DanielVaughan.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MEF", "MEF", "{4F9BEFF7-1F0B-4060-B38E-9E46464E5001}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\Microsoft.Practices.Unity.dll = Assemblies\Microsoft.Practices.Unity.dll
+		Assemblies\Microsoft.Practices.Unity.Interception.dll = Assemblies\Microsoft.Practices.Unity.Interception.dll
+		Assemblies\Microsoft.Practices.Unity.Silverlight.dll = Assemblies\Microsoft.Practices.Unity.Silverlight.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVVM", "MVVM", "{80DBD0B0-52A7-462E-8F31-B224D1B7CCA9}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\GalaSoft.MvvmLight.Extras.SL4.dll = Assemblies\GalaSoft.MvvmLight.Extras.SL4.dll
+		Assemblies\GalaSoft.MvvmLight.SL4.dll = Assemblies\GalaSoft.MvvmLight.SL4.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Toolkit", "Toolkit", "{EA9E7281-2751-4E1B-9922-6E379B9CFC5C}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\System.Windows.Controls.Data.dll = Assemblies\System.Windows.Controls.Data.dll
+		Assemblies\System.Windows.Controls.Data.Input.dll = Assemblies\System.Windows.Controls.Data.Input.dll
+		Assemblies\System.Windows.Controls.DataVisualization.Toolkit.dll = Assemblies\System.Windows.Controls.DataVisualization.Toolkit.dll
+		Assemblies\System.Windows.Controls.dll = Assemblies\System.Windows.Controls.dll
+		Assemblies\System.Windows.Controls.Input.dll = Assemblies\System.Windows.Controls.Input.dll
+		Assemblies\System.Windows.Controls.Navigation.dll = Assemblies\System.Windows.Controls.Navigation.dll
+		Assemblies\System.Windows.Controls.Toolkit.dll = Assemblies\System.Windows.Controls.Toolkit.dll
+		Assemblies\System.Windows.Controls.Toolkit.Internals.dll = Assemblies\System.Windows.Controls.Toolkit.Internals.dll
+		Assemblies\System.Windows.Interactivity.dll = Assemblies\System.Windows.Interactivity.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Telerik", "Telerik", "{4D81F282-C7D7-4878-90A6-DE90AA7E0586}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\Telerik.Windows.Controls.Charting.dll = Assemblies\Telerik.Windows.Controls.Charting.dll
+		Assemblies\Telerik.Windows.Controls.dll = Assemblies\Telerik.Windows.Controls.dll
+		Assemblies\Telerik.Windows.Controls.GridView.dll = Assemblies\Telerik.Windows.Controls.GridView.dll
+		Assemblies\Telerik.Windows.Controls.Input.dll = Assemblies\Telerik.Windows.Controls.Input.dll
+		Assemblies\Telerik.Windows.Controls.Navigation.dll = Assemblies\Telerik.Windows.Controls.Navigation.dll
+		Assemblies\Telerik.Windows.Controls.RibbonBar.dll = Assemblies\Telerik.Windows.Controls.RibbonBar.dll
+		Assemblies\Telerik.Windows.Data.dll = Assemblies\Telerik.Windows.Data.dll
+		Assemblies\Telerik.Windows.Themes.Summer.dll = Assemblies\Telerik.Windows.Themes.Summer.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment Package", "Deployment Package", "{331906FA-71FA-437A-9DA4-C2EF0C27AA23}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "OfferApp", "OfferApp\OfferApp.vdproj", "{CA31097E-BA2E-4C23-A7BC-21AD2084A670}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "citPOINT.OfferApp.MVVM.UnitTest", "citPOINT.OfferApp.MVVM.UnitTest\citPOINT.OfferApp.MVVM.UnitTest.csproj", "{10FD3682-0E27-479C-8C8C-D9E490E6993A}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 12
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = citPOINT.OfferApp.Client\\citPOINT.OfferApp.Client.csproj
+		SccProjectTopLevelParentUniqueName1 = citPOINT.OfferApp.sln
+		SccProjectName1 = citPOINT.OfferApp.Client
+		SccLocalPath1 = citPOINT.OfferApp.Client
+		SccProjectUniqueName2 = citPOINT.OfferApp.Common\\citPOINT.OfferApp.Common.csproj
+		SccProjectTopLevelParentUniqueName2 = citPOINT.OfferApp.sln
+		SccProjectName2 = citPOINT.OfferApp.Common
+		SccLocalPath2 = citPOINT.OfferApp.Common
+		SccProjectUniqueName3 = citPOINT.OfferApp.Data.Web.Test\\citPoint.OfferApp.Data.Web.Test.csproj
+		SccProjectTopLevelParentUniqueName3 = citPOINT.OfferApp.sln
+		SccProjectName3 = citPOINT.OfferApp.Data.Web.Test
+		SccLocalPath3 = citPOINT.OfferApp.Data.Web.Test
+		SccProjectUniqueName4 = citPOINT.OfferApp.Data.Web\\citPOINT.OfferApp.Data.Web.csproj
+		SccProjectTopLevelParentUniqueName4 = citPOINT.OfferApp.sln
+		SccProjectName4 = citPOINT.OfferApp.Data.Web
+		SccLocalPath4 = citPOINT.OfferApp.Data.Web
+		SccProjectUniqueName5 = citPOINT.OfferApp.Data\\citPOINT.OfferApp.Data.csproj
+		SccProjectTopLevelParentUniqueName5 = citPOINT.OfferApp.sln
+		SccProjectName5 = citPOINT.OfferApp.Data
+		SccLocalPath5 = citPOINT.OfferApp.Data
+		SccProjectUniqueName6 = citPOINT.OfferApp.DataBase\\citPOINT.OfferApp.DataBase.dbproj
+		SccProjectTopLevelParentUniqueName6 = citPOINT.OfferApp.sln
+		SccProjectName6 = citPOINT.OfferApp.DataBase
+		SccLocalPath6 = citPOINT.OfferApp.DataBase
+		SccProjectUniqueName7 = citPOINT.OfferApp.Model\\citPOINT.OfferApp.Model.csproj
+		SccProjectTopLevelParentUniqueName7 = citPOINT.OfferApp.sln
+		SccProjectName7 = citPOINT.OfferApp.Model
+		SccLocalPath7 = citPOINT.OfferApp.Model
+		SccProjectUniqueName8 = citPOINT.OfferApp.ViewModel\\citPOINT.OfferApp.ViewModel.csproj
+		SccProjectTopLevelParentUniqueName8 = citPOINT.OfferApp.sln
+		SccProjectName8 = citPOINT.OfferApp.ViewModel
+		SccLocalPath8 = citPOINT.OfferApp.ViewModel
+		SccProjectUniqueName9 = citPOINT.OfferApp.Web\\citPOINT.OfferApp.Web.csproj
+		SccProjectTopLevelParentUniqueName9 = citPOINT.OfferApp.sln
+		SccProjectName9 = citPOINT.OfferApp.Web
+		SccLocalPath9 = citPOINT.OfferApp.Web
+		SccProjectUniqueName10 = citPOINT.OfferApp.MVVM.UnitTest\\citPOINT.OfferApp.MVVM.UnitTest.csproj
+		SccProjectTopLevelParentUniqueName10 = citPOINT.OfferApp.sln
+		SccProjectName10 = citPOINT.OfferApp.MVVM.UnitTest
+		SccLocalPath10 = citPOINT.OfferApp.MVVM.UnitTest
+		SccProjectUniqueName11 = OfferApp\\OfferApp.vdproj
+		SccProjectTopLevelParentUniqueName11 = citPOINT.OfferApp.sln
+		SccProjectName11 = OfferApp
+		SccLocalPath11 = OfferApp
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = citPOINT.OfferApp.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6955AC44-F84E-4BD8-BAF9-E034FD305DF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6955AC44-F84E-4BD8-BAF9-E034FD305DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6955AC44-F84E-4BD8-BAF9-E034FD305DF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6955AC44-F84E-4BD8-BAF9-E034FD305DF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3150E27B-735A-446F-B968-1E361F7D517C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3150E27B-735A-446F-B968-1E361F7D517C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3150E27B-735A-446F-B968-1E361F7D517C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3150E27B-735A-446F-B968-1E361F7D517C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB22B9FB-1FB8-4D07-9A6A-67602F2A7ECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB22B9FB-1FB8-4D07-9A6A-67602F2A7ECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB22B9FB-1FB8-4D07-9A6A-67602F2A7ECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB22B9FB-1FB8-4D07-9A6A-67602F2A7ECF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60ACEB97-67E1-415C-BFF6-BC0C6750F658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60ACEB97-67E1-415C-BFF6-BC0C6750F658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60ACEB97-67E1-415C-BFF6-BC0C6750F658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60ACEB97-67E1-415C-BFF6-BC0C6750F658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87A51949-5C8A-40BB-AD21-B4CB91714122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87A51949-5C8A-40BB-AD21-B4CB91714122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87A51949-5C8A-40BB-AD21-B4CB91714122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87A51949-5C8A-40BB-AD21-B4CB91714122}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DEF2461-995C-4290-B230-8346476EFCE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DEF2461-995C-4290-B230-8346476EFCE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DEF2461-995C-4290-B230-8346476EFCE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DEF2461-995C-4290-B230-8346476EFCE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCDD0384-003B-4BA2-9779-56DB6B0038FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCDD0384-003B-4BA2-9779-56DB6B0038FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCDD0384-003B-4BA2-9779-56DB6B0038FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCDD0384-003B-4BA2-9779-56DB6B0038FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA31097E-BA2E-4C23-A7BC-21AD2084A670}.Debug|Any CPU.ActiveCfg = Debug
+		{CA31097E-BA2E-4C23-A7BC-21AD2084A670}.Release|Any CPU.ActiveCfg = Release
+		{10FD3682-0E27-479C-8C8C-D9E490E6993A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10FD3682-0E27-479C-8C8C-D9E490E6993A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10FD3682-0E27-479C-8C8C-D9E490E6993A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10FD3682-0E27-479C-8C8C-D9E490E6993A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6955AC44-F84E-4BD8-BAF9-E034FD305DF2} = {1882AB08-37C7-4EE6-ABD4-073145BF5F09}
+		{3150E27B-735A-446F-B968-1E361F7D517C} = {1882AB08-37C7-4EE6-ABD4-073145BF5F09}
+		{AB22B9FB-1FB8-4D07-9A6A-67602F2A7ECF} = {1882AB08-37C7-4EE6-ABD4-073145BF5F09}
+		{60ACEB97-67E1-415C-BFF6-BC0C6750F658} = {1882AB08-37C7-4EE6-ABD4-073145BF5F09}
+		{87A51949-5C8A-40BB-AD21-B4CB91714122} = {1882AB08-37C7-4EE6-ABD4-073145BF5F09}
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3} = {E2D39342-463D-4B2D-B95B-6D396E028DA2}
+		{BCDD0384-003B-4BA2-9779-56DB6B0038FD} = {861B1940-FF36-4221-90C0-F6BA848A1713}
+		{10FD3682-0E27-479C-8C8C-D9E490E6993A} = {861B1940-FF36-4221-90C0-F6BA848A1713}
+		{073D3CBE-FD31-4100-99D0-DC40E2DAD066} = {B6F3C67C-E74C-4232-8060-8344521F7855}
+		{5DEF2461-995C-4290-B230-8346476EFCE8} = {B6F3C67C-E74C-4232-8060-8344521F7855}
+		{B590B945-C928-4D0F-B5F1-99FE71A803F4} = {3B3F9C66-AEB8-41A0-9A6D-CFFCB72F9679}
+		{B4E95D2E-6F02-442D-A339-786B110B3DD6} = {3B3F9C66-AEB8-41A0-9A6D-CFFCB72F9679}
+		{AE2B647E-B3CD-40B3-B47F-9D357443584A} = {3B3F9C66-AEB8-41A0-9A6D-CFFCB72F9679}
+		{4F9BEFF7-1F0B-4060-B38E-9E46464E5001} = {3B3F9C66-AEB8-41A0-9A6D-CFFCB72F9679}
+		{80DBD0B0-52A7-462E-8F31-B224D1B7CCA9} = {3B3F9C66-AEB8-41A0-9A6D-CFFCB72F9679}
+		{EA9E7281-2751-4E1B-9922-6E379B9CFC5C} = {3B3F9C66-AEB8-41A0-9A6D-CFFCB72F9679}
+		{4D81F282-C7D7-4878-90A6-DE90AA7E0586} = {3B3F9C66-AEB8-41A0-9A6D-CFFCB72F9679}
+		{8C3BC3D6-C86F-415A-BA36-F1A5B3AE4E9C} = {AE2B647E-B3CD-40B3-B47F-9D357443584A}
+		{CA31097E-BA2E-4C23-A7BC-21AD2084A670} = {331906FA-71FA-437A-9DA4-C2EF0C27AA23}
+	EndGlobalSection
+EndGlobal

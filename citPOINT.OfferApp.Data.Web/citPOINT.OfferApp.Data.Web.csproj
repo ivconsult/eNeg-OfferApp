@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{073D3CBE-FD31-4100-99D0-DC40E2DAD066}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>citPOINT.OfferApp.Data.Web</RootNamespace>
+    <AssemblyName>citPOINT.OfferApp.Data.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\citPOINT.OfferApp.Data.Web.xml</DocumentationFile>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="citPOINT.eNeg.Infrastructure.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assemblies\citPOINT.eNeg.Infrastructure.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.DomainServices.EntityFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.ServiceModel.DomainServices.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.DomainServices.Hosting.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.ServiceModel.DomainServices.Server, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\citPOINT.PrefApp\citPOINT.PrefApp.Common\Helpers\CalculationEngine\INumericBoundary.cs">
+      <Link>Offer Agent\Helpers\INumericBoundary.cs</Link>
+    </Compile>
+    <Compile Include="..\..\citPOINT.PrefApp\citPOINT.PrefApp.Common\Helpers\CalculationEngine\NumericCalculation.cs">
+      <Link>Offer Agent\Helpers\NumericCalculation.cs</Link>
+    </Compile>
+    <Compile Include="..\..\citPOINT.PrefApp\citPOINT.PrefApp.Data\Helpers\INumericIssue.cs">
+      <Link>Offer Agent\Helpers\INumericIssue.cs</Link>
+    </Compile>
+    <Compile Include="DataTypes\ExpectedTarget.cs" />
+    <Compile Include="DataTypes\OfferDetails.cs" />
+    <Compile Include="Offer Agent\Helpers\NumericBoundary.cs" />
+    <Compile Include="Offer Agent\Helpers\PrefAppService.metadata.Extensions.cs" />
+    <Compile Include="Offer Agent\Offer.cs" />
+    <Compile Include="Offer Agent\OfferAgent.cs" />
+    <Compile Include="Offer Agent\OfferIssueBase.cs" />
+    <Compile Include="Offer Agent\OfferNotRatedIssue.cs" />
+    <Compile Include="Offer Agent\OfferNumericIssue.cs" />
+    <Compile Include="Offer Agent\OfferOptionIssue.cs" />
+    <Compile Include="OfferAppModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OfferAppModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PrefAppService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Services\OfferAppService.cs" />
+    <Compile Include="Services\OfferAppService.Manual.cs" />
+    <Compile Include="Services\OfferAppService.metadata.cs" />
+    <Compile Include="Service References\StrategyAppService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ServiceAuthentication.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\SessionService.cs" />
+    <Compile Include="DataTypes\TargetTypeOptions.cs" />
+    <Compile Include="DataTypes\Status.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="OfferAppModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>OfferAppModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Properties\DataSources\System.ServiceModel.DomainServices.Server.ChangeSetEntry.datasource" />
+    <None Include="Service References\PrefAppService\citPOINT-PrefApp-Data-Web-PrefAppService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT-PrefApp-Data-Web-PrefAppService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT-PrefApp-Data-Web-PrefAppService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT-PrefApp-Data-Web-PrefAppService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT-PrefApp-Data-Web-PrefAppService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT-PrefApp-Data-Web-PrefAppService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT-PrefApp-Data-Web-PrefAppService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.ChangeSetEntry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfActionType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfCompletePreferenceSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfConversation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfConversationMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfConversationPeriod.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfCoordinatesPoints.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfExpectedTarget.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfHistory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfIssue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfIssueHistoryResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfIssueStatisticalsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfIssueType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfLastOfferDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfLaterRatedIssue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfMainPreferenceSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfMessageIssue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfMessageLaterRatedIssue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfMessageOptionIssue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfNegConversation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfNegotiation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfNumericIssue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfOfferItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfOptionIssue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfOrganization.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfPreferenceSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfPreferenceSetNeg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\citPOINT.OfferApp.Data.Web.PrefAppService.QueryResultOfPreferenceSetOrganization.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PrefAppService\PrefAppService.wsdl" />
+    <None Include="Service References\StrategyAppService\citPOINT-StrategyApp-Data-Web-StrategyAppService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StrategyAppService\citPOINT-StrategyApp-Data-Web-StrategyAppService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StrategyAppService\citPOINT-StrategyApp-Data-Web-StrategyAppService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StrategyAppService\citPOINT-StrategyApp-Data-Web-StrategyAppService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StrategyAppService\citPOINT-StrategyApp-Data-Web-StrategyAppService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StrategyAppService\citPOINT.OfferApp.Data.Web.StrategyAppService.ConversationPeriod.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\StrategyAppService\citPOINT.OfferApp.Data.Web.StrategyAppService.ConversationStrategySetting.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\StrategyAppService\citPOINT.OfferApp.Data.Web.StrategyAppService.ExpectedTarget.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\StrategyAppService\citPOINT.OfferApp.Data.Web.StrategyAppService.LastOfferDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\StrategyAppService\citPOINT.OfferApp.Data.Web.StrategyAppService.NegotiationStrategySetting.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\StrategyAppService\citPOINT.OfferApp.Data.Web.StrategyAppService.PreferenceSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\StrategyAppService\citPOINT.OfferApp.Data.Web.StrategyAppService.StrategyType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\StrategyAppService\StrategyAppService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\PrefAppService\" />
+    <WCFMetadataStorage Include="Service References\StrategyAppService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StrategyAppService\citPOINT-StrategyApp-Data-Web-StrategyAppService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StrategyAppService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StrategyAppService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StrategyAppService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PrefAppService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PrefAppService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PrefAppService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

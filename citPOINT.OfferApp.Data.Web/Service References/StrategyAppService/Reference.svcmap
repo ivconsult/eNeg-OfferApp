@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fa7a0bff-3421-42d4-9900-67be65538c5f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:9006/Services/citPOINT-StrategyApp-Data-Web-StrategyAppService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="citPOINT-StrategyApp-Data-Web-StrategyAppService.xsd" MetadataType="Schema" ID="9bd64f97-307a-4cf6-8d1e-03f6cb560e69" SourceId="1" SourceUrl="http://localhost:9006/Services/citPOINT-StrategyApp-Data-Web-StrategyAppService.svc?xsd=xsd1" />
+    <MetadataFile FileName="citPOINT-StrategyApp-Data-Web-StrategyAppService1.xsd" MetadataType="Schema" ID="9b2e9abd-e0db-445c-ac7d-ed8a0ce18bbb" SourceId="1" SourceUrl="http://localhost:9006/Services/citPOINT-StrategyApp-Data-Web-StrategyAppService.svc?xsd=xsd4" />
+    <MetadataFile FileName="StrategyAppService.wsdl" MetadataType="Wsdl" ID="da0d475f-25f1-45ac-8ff6-4fd5d9aa9842" SourceId="1" SourceUrl="http://localhost:9006/Services/citPOINT-StrategyApp-Data-Web-StrategyAppService.svc?wsdl" />
+    <MetadataFile FileName="citPOINT-StrategyApp-Data-Web-StrategyAppService2.xsd" MetadataType="Schema" ID="a1d3fc3c-c215-4bbc-9a1b-8084159ff888" SourceId="1" SourceUrl="http://localhost:9006/Services/citPOINT-StrategyApp-Data-Web-StrategyAppService.svc?xsd=xsd2" />
+    <MetadataFile FileName="citPOINT-StrategyApp-Data-Web-StrategyAppService3.xsd" MetadataType="Schema" ID="59ad553c-b9a3-45ef-934b-199205049733" SourceId="1" SourceUrl="http://localhost:9006/Services/citPOINT-StrategyApp-Data-Web-StrategyAppService.svc?xsd=xsd0" />
+    <MetadataFile FileName="citPOINT-StrategyApp-Data-Web-StrategyAppService.disco" MetadataType="Disco" ID="92b098ee-1c9a-4c6b-84e5-65f143aa5f33" SourceId="1" SourceUrl="http://localhost:9006/Services/citPOINT-StrategyApp-Data-Web-StrategyAppService.svc?disco" />
+    <MetadataFile FileName="citPOINT-StrategyApp-Data-Web-StrategyAppService4.xsd" MetadataType="Schema" ID="148285e9-5275-4bd6-b227-c42ee57097f5" SourceId="1" SourceUrl="http://localhost:9006/Services/citPOINT-StrategyApp-Data-Web-StrategyAppService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

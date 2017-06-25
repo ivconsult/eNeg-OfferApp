@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="StrategyAppService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:9006/Services/citPOINT-StrategyApp-Data-Web-StrategyAppService.svc?xsd=xsd2" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:9006/Services/citPOINT-StrategyApp-Data-Web-StrategyAppService.svc?xsd=xsd3" namespace="DomainServices" />
+      <xsd:import schemaLocation="http://localhost:9006/Services/citPOINT-StrategyApp-Data-Web-StrategyAppService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:9006/Services/citPOINT-StrategyApp-Data-Web-StrategyAppService.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/citPOINT.StrategyApp.Data.Web" />
+      <xsd:import schemaLocation="http://localhost:9006/Services/citPOINT-StrategyApp-Data-Web-StrategyAppService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="StrategyAppServiceSoap_GetConversationStrategySettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConversationStrategySettings" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetConversationStrategySettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConversationStrategySettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetConversationStrategySettings_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q1="DomainServices" name="detail" element="q1:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetNegotiationStrategySettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNegotiationStrategySettings" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetNegotiationStrategySettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNegotiationStrategySettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetNegotiationStrategySettings_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q2="DomainServices" name="detail" element="q2:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetStrategyTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrategyTypes" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetStrategyTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrategyTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetStrategyTypes_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q3="DomainServices" name="detail" element="q3:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetNextExpectedTargetForNegotiation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextExpectedTargetForNegotiation" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetNextExpectedTargetForNegotiation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextExpectedTargetForNegotiationResponse" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetNextExpectedTargetForNegotiation_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q4="DomainServices" name="detail" element="q4:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetNextExpectedTargetForConversation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextExpectedTargetForConversation" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetNextExpectedTargetForConversation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextExpectedTargetForConversationResponse" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetNextExpectedTargetForConversation_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q5="DomainServices" name="detail" element="q5:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetNegotiationStrategySettingsByNegID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNegotiationStrategySettingsByNegID" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetNegotiationStrategySettingsByNegID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNegotiationStrategySettingsByNegIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetNegotiationStrategySettingsByNegID_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q6="DomainServices" name="detail" element="q6:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetNegotiationPeriod_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNegotiationPeriod" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetNegotiationPeriod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNegotiationPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetNegotiationPeriod_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q7="DomainServices" name="detail" element="q7:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetConversationStrategySettingsByConvID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConversationStrategySettingsByConvID" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetConversationStrategySettingsByConvID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConversationStrategySettingsByConvIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetConversationStrategySettingsByConvID_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q8="DomainServices" name="detail" element="q8:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetConversationPeriod_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConversationPeriod" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetConversationPeriod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConversationPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetConversationPeriod_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q9="DomainServices" name="detail" element="q9:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetPreferenceSetForNegotiation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreferenceSetForNegotiation" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetPreferenceSetForNegotiation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreferenceSetForNegotiationResponse" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetPreferenceSetForNegotiation_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q10="DomainServices" name="detail" element="q10:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetLastOfferForConversation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastOfferForConversation" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetLastOfferForConversation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastOfferForConversationResponse" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_GetLastOfferForConversation_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q11="DomainServices" name="detail" element="q11:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_SubmitChanges_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitChanges" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_SubmitChanges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitChangesResponse" />
+  </wsdl:message>
+  <wsdl:message name="StrategyAppServiceSoap_SubmitChanges_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q12="DomainServices" name="detail" element="q12:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:portType name="StrategyAppServiceSoap">
+    <wsdl:operation name="GetConversationStrategySettings">
+      <wsdl:input wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetConversationStrategySettings" message="tns:StrategyAppServiceSoap_GetConversationStrategySettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetConversationStrategySettingsResponse" message="tns:StrategyAppServiceSoap_GetConversationStrategySettings_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetConversationStrategySettingsDomainServiceFault" name="DomainServiceFault" message="tns:StrategyAppServiceSoap_GetConversationStrategySettings_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNegotiationStrategySettings">
+      <wsdl:input wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetNegotiationStrategySettings" message="tns:StrategyAppServiceSoap_GetNegotiationStrategySettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetNegotiationStrategySettingsResponse" message="tns:StrategyAppServiceSoap_GetNegotiationStrategySettings_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetNegotiationStrategySettingsDomainServiceFault" name="DomainServiceFault" message="tns:StrategyAppServiceSoap_GetNegotiationStrategySettings_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStrategyTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetStrategyTypes" message="tns:StrategyAppServiceSoap_GetStrategyTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetStrategyTypesResponse" message="tns:StrategyAppServiceSoap_GetStrategyTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetStrategyTypesDomainServiceFault" name="DomainServiceFault" message="tns:StrategyAppServiceSoap_GetStrategyTypes_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNextExpectedTargetForNegotiation">
+      <wsdl:input wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetNextExpectedTargetForNegotiation" message="tns:StrategyAppServiceSoap_GetNextExpectedTargetForNegotiation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetNextExpectedTargetForNegotiationResponse" message="tns:StrategyAppServiceSoap_GetNextExpectedTargetForNegotiation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetNextExpectedTargetForNegotiationDomainServiceFault" name="DomainServiceFault" message="tns:StrategyAppServiceSoap_GetNextExpectedTargetForNegotiation_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNextExpectedTargetForConversation">
+      <wsdl:input wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetNextExpectedTargetForConversation" message="tns:StrategyAppServiceSoap_GetNextExpectedTargetForConversation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetNextExpectedTargetForConversationResponse" message="tns:StrategyAppServiceSoap_GetNextExpectedTargetForConversation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetNextExpectedTargetForConversationDomainServiceFault" name="DomainServiceFault" message="tns:StrategyAppServiceSoap_GetNextExpectedTargetForConversation_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNegotiationStrategySettingsByNegID">
+      <wsdl:input wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetNegotiationStrategySettingsByNegID" message="tns:StrategyAppServiceSoap_GetNegotiationStrategySettingsByNegID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetNegotiationStrategySettingsByNegIDResponse" message="tns:StrategyAppServiceSoap_GetNegotiationStrategySettingsByNegID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetNegotiationStrategySettingsByNegIDDomainServiceFault" name="DomainServiceFault" message="tns:StrategyAppServiceSoap_GetNegotiationStrategySettingsByNegID_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNegotiationPeriod">
+      <wsdl:input wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetNegotiationPeriod" message="tns:StrategyAppServiceSoap_GetNegotiationPeriod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetNegotiationPeriodResponse" message="tns:StrategyAppServiceSoap_GetNegotiationPeriod_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetNegotiationPeriodDomainServiceFault" name="DomainServiceFault" message="tns:StrategyAppServiceSoap_GetNegotiationPeriod_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConversationStrategySettingsByConvID">
+      <wsdl:input wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetConversationStrategySettingsByConvID" message="tns:StrategyAppServiceSoap_GetConversationStrategySettingsByConvID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetConversationStrategySettingsByConvIDResponse" message="tns:StrategyAppServiceSoap_GetConversationStrategySettingsByConvID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetConversationStrategySettingsByConvIDDomainServiceFault" name="DomainServiceFault" message="tns:StrategyAppServiceSoap_GetConversationStrategySettingsByConvID_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConversationPeriod">
+      <wsdl:input wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetConversationPeriod" message="tns:StrategyAppServiceSoap_GetConversationPeriod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetConversationPeriodResponse" message="tns:StrategyAppServiceSoap_GetConversationPeriod_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetConversationPeriodDomainServiceFault" name="DomainServiceFault" message="tns:StrategyAppServiceSoap_GetConversationPeriod_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreferenceSetForNegotiation">
+      <wsdl:input wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetPreferenceSetForNegotiation" message="tns:StrategyAppServiceSoap_GetPreferenceSetForNegotiation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetPreferenceSetForNegotiationResponse" message="tns:StrategyAppServiceSoap_GetPreferenceSetForNegotiation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetPreferenceSetForNegotiationDomainServiceFault" name="DomainServiceFault" message="tns:StrategyAppServiceSoap_GetPreferenceSetForNegotiation_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastOfferForConversation">
+      <wsdl:input wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetLastOfferForConversation" message="tns:StrategyAppServiceSoap_GetLastOfferForConversation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetLastOfferForConversationResponse" message="tns:StrategyAppServiceSoap_GetLastOfferForConversation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/GetLastOfferForConversationDomainServiceFault" name="DomainServiceFault" message="tns:StrategyAppServiceSoap_GetLastOfferForConversation_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitChanges">
+      <wsdl:input wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/SubmitChanges" message="tns:StrategyAppServiceSoap_SubmitChanges_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/SubmitChangesResponse" message="tns:StrategyAppServiceSoap_SubmitChanges_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/StrategyAppServiceSoap/SubmitChangesDomainServiceFault" name="DomainServiceFault" message="tns:StrategyAppServiceSoap_SubmitChanges_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_StrategyAppServiceSoap" type="tns:StrategyAppServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetConversationStrategySettings">
+      <soap:operation soapAction="http://tempuri.org/StrategyAppServiceSoap/GetConversationStrategySettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNegotiationStrategySettings">
+      <soap:operation soapAction="http://tempuri.org/StrategyAppServiceSoap/GetNegotiationStrategySettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStrategyTypes">
+      <soap:operation soapAction="http://tempuri.org/StrategyAppServiceSoap/GetStrategyTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextExpectedTargetForNegotiation">
+      <soap:operation soapAction="http://tempuri.org/StrategyAppServiceSoap/GetNextExpectedTargetForNegotiation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextExpectedTargetForConversation">
+      <soap:operation soapAction="http://tempuri.org/StrategyAppServiceSoap/GetNextExpectedTargetForConversation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNegotiationStrategySettingsByNegID">
+      <soap:operation soapAction="http://tempuri.org/StrategyAppServiceSoap/GetNegotiationStrategySettingsByNegID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNegotiationPeriod">
+      <soap:operation soapAction="http://tempuri.org/StrategyAppServiceSoap/GetNegotiationPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetConversationStrategySettingsByConvID">
+      <soap:operation soapAction="http://tempuri.org/StrategyAppServiceSoap/GetConversationStrategySettingsByConvID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetConversationPeriod">
+      <soap:operation soapAction="http://tempuri.org/StrategyAppServiceSoap/GetConversationPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreferenceSetForNegotiation">
+      <soap:operation soapAction="http://tempuri.org/StrategyAppServiceSoap/GetPreferenceSetForNegotiation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastOfferForConversation">
+      <soap:operation soapAction="http://tempuri.org/StrategyAppServiceSoap/GetLastOfferForConversation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitChanges">
+      <soap:operation soapAction="http://tempuri.org/StrategyAppServiceSoap/SubmitChanges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StrategyAppService">
+    <wsdl:port name="BasicHttpBinding_StrategyAppServiceSoap" binding="tns:BasicHttpBinding_StrategyAppServiceSoap">
+      <soap:address location="http://localhost:9006/Services/citPOINT-StrategyApp-Data-Web-StrategyAppService.svc/Soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

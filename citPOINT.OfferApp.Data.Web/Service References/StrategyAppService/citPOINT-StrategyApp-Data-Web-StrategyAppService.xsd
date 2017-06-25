@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/citPOINT.StrategyApp.Data.Web" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/citPOINT.StrategyApp.Data.Web" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:9006/Services/citPOINT-StrategyApp-Data-Web-StrategyAppService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ConversationStrategySetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BetaValue" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ConversationID" type="ser:guid" />
+      <xs:element minOccurs="0" name="ConversationStrategySettingsID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NegotiationStrategySettingsID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StrategyTypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConversationStrategySetting" nillable="true" type="tns:ConversationStrategySetting" />
+  <xs:complexType name="NegotiationStrategySetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BetaValue" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DefaultEndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DefaultStartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Deleted" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeletedBy" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NegotiationID" type="ser:guid" />
+      <xs:element minOccurs="0" name="NegotiationStrategySettingsID" type="ser:guid" />
+      <xs:element minOccurs="0" name="StrategyTypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NegotiationStrategySetting" nillable="true" type="tns:NegotiationStrategySetting" />
+  <xs:complexType name="StrategyType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Beta" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StrategyTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="StrategyTypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StrategyType" nillable="true" type="tns:StrategyType" />
+  <xs:complexType name="ExpectedTarget">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" type="tns:Status" />
+      <xs:element minOccurs="0" name="Target" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExpectedTarget" nillable="true" type="tns:ExpectedTarget" />
+  <xs:simpleType name="Status">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="Failed" />
+      <xs:enumeration value="DateOutOfPeriod" />
+      <xs:enumeration value="NoSettings" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Status" nillable="true" type="tns:Status" />
+  <xs:complexType name="ConversationPeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxConversationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MinConversationDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConversationPeriod" nillable="true" type="tns:ConversationPeriod" />
+  <xs:complexType name="PreferenceSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MaxPercentage" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PreferenceID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PreferenceSet" nillable="true" type="tns:PreferenceSet" />
+  <xs:complexType name="LastOfferDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="OfferDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Percentage" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LastOfferDetails" nillable="true" type="tns:LastOfferDetails" />
+  <xs:complexType name="ArrayOfConversationStrategySetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConversationStrategySetting" nillable="true" type="tns:ConversationStrategySetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConversationStrategySetting" nillable="true" type="tns:ArrayOfConversationStrategySetting" />
+  <xs:complexType name="ArrayOfNegotiationStrategySetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NegotiationStrategySetting" nillable="true" type="tns:NegotiationStrategySetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNegotiationStrategySetting" nillable="true" type="tns:ArrayOfNegotiationStrategySetting" />
+  <xs:complexType name="ArrayOfStrategyType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StrategyType" nillable="true" type="tns:StrategyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStrategyType" nillable="true" type="tns:ArrayOfStrategyType" />
+  <xs:complexType name="ArrayOfExpectedTarget">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpectedTarget" nillable="true" type="tns:ExpectedTarget" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpectedTarget" nillable="true" type="tns:ArrayOfExpectedTarget" />
+  <xs:complexType name="ArrayOfConversationPeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConversationPeriod" nillable="true" type="tns:ConversationPeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConversationPeriod" nillable="true" type="tns:ArrayOfConversationPeriod" />
+  <xs:complexType name="ArrayOfPreferenceSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PreferenceSet" nillable="true" type="tns:PreferenceSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPreferenceSet" nillable="true" type="tns:ArrayOfPreferenceSet" />
+  <xs:complexType name="ArrayOfLastOfferDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LastOfferDetails" nillable="true" type="tns:LastOfferDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLastOfferDetails" nillable="true" type="tns:ArrayOfLastOfferDetails" />
+</xs:schema>

@@ -1,0 +1,1454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PrefAppService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:9002/Services/citPOINT-PrefApp-Data-Web-PrefAppService.svc?xsd=xsd3" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:9002/Services/citPOINT-PrefApp-Data-Web-PrefAppService.svc?xsd=xsd4" namespace="DomainServices" />
+      <xsd:import schemaLocation="http://localhost:9002/Services/citPOINT-PrefApp-Data-Web-PrefAppService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:9002/Services/citPOINT-PrefApp-Data-Web-PrefAppService.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/citPOINT.PrefApp.Data.Web" />
+      <xsd:import schemaLocation="http://localhost:9002/Services/citPOINT-PrefApp-Data-Web-PrefAppService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/citPOINT.PrefApp.Data.Web.Complete" />
+      <xsd:import schemaLocation="http://localhost:9002/Services/citPOINT-PrefApp-Data-Web-PrefAppService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:9002/Services/citPOINT-PrefApp-Data-Web-PrefAppService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="PrefAppServiceSoap_GetNegConversations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNegConversations" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNegConversations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNegConversationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNegConversations_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q1="DomainServices" name="detail" element="q1:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNumericIssues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumericIssues" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNumericIssues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumericIssuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNumericIssues_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q2="DomainServices" name="detail" element="q2:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetOptionIssues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOptionIssues" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetOptionIssues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOptionIssuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetOptionIssues_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q3="DomainServices" name="detail" element="q3:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPreferenceSetNegs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreferenceSetNegs" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPreferenceSetNegs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreferenceSetNegsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPreferenceSetNegs_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q4="DomainServices" name="detail" element="q4:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPreferenceSetOrganizations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreferenceSetOrganizations" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPreferenceSetOrganizations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreferenceSetOrganizationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPreferenceSetOrganizations_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q5="DomainServices" name="detail" element="q5:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPreferenceSetForNegotiation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreferenceSetForNegotiation" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPreferenceSetForNegotiation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreferenceSetForNegotiationResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPreferenceSetForNegotiation_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q6="DomainServices" name="detail" element="q6:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssuesForPreferenceSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssuesForPreferenceSet" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssuesForPreferenceSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssuesForPreferenceSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssuesForPreferenceSet_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q7="DomainServices" name="detail" element="q7:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetConversationScore_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConversationScore" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetConversationScore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConversationScoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetConversationScore_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q8="DomainServices" name="detail" element="q8:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetGraphForNegotiation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGraphForNegotiation" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetGraphForNegotiation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGraphForNegotiationResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetGraphForNegotiation_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q9="DomainServices" name="detail" element="q9:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetGraphForConversation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGraphForConversation" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetGraphForConversation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGraphForConversationResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetGraphForConversation_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q10="DomainServices" name="detail" element="q10:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMinValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMinValue" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMinValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMinValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMinValue_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q11="DomainServices" name="detail" element="q11:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMaxValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaxValue" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMaxValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaxValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMaxValue_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q12="DomainServices" name="detail" element="q12:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPossibleValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPossibleValues" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPossibleValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPossibleValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPossibleValues_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q13="DomainServices" name="detail" element="q13:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetValueOfIssue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValueOfIssue" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetValueOfIssue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValueOfIssueResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetValueOfIssue_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q14="DomainServices" name="detail" element="q14:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetLastValueOfIssue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastValueOfIssue" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetLastValueOfIssue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastValueOfIssueResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetLastValueOfIssue_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q15="DomainServices" name="detail" element="q15:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNextOfferID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextOfferID" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNextOfferID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextOfferIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNextOfferID_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q16="DomainServices" name="detail" element="q16:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_SetValueOfIssue_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetValueOfIssue" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_SetValueOfIssue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetValueOfIssueResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_SetValueOfIssue_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q17="DomainServices" name="detail" element="q17:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_OfferFinished_InputMessage">
+    <wsdl:part name="parameters" element="tns:OfferFinished" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_OfferFinished_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OfferFinishedResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_OfferFinished_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q18="DomainServices" name="detail" element="q18:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssuesHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssuesHistory" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssuesHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssuesHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssuesHistory_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q19="DomainServices" name="detail" element="q19:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssuesHistoryByNegID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssuesHistoryByNegID" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssuesHistoryByNegID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssuesHistoryByNegIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssuesHistoryByNegID_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q20="DomainServices" name="detail" element="q20:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssueStatisticals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssueStatisticals" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssueStatisticals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssueStatisticalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssueStatisticals_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q21="DomainServices" name="detail" element="q21:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPreferenceSetsForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreferenceSetsForUser" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPreferenceSetsForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreferenceSetsForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPreferenceSetsForUser_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q22="DomainServices" name="detail" element="q22:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPreferenceSetsByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreferenceSetsByID" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPreferenceSetsByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreferenceSetsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPreferenceSetsByID_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q23="DomainServices" name="detail" element="q23:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPreferenceSetOrganizationsForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreferenceSetOrganizationsForUser" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPreferenceSetOrganizationsForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreferenceSetOrganizationsForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetPreferenceSetOrganizationsForUser_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q24="DomainServices" name="detail" element="q24:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssuesRelatedToSpecificUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssuesRelatedToSpecificUser" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssuesRelatedToSpecificUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssuesRelatedToSpecificUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssuesRelatedToSpecificUser_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q25="DomainServices" name="detail" element="q25:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNumericIssuesRelatedToSpecificUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumericIssuesRelatedToSpecificUser" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNumericIssuesRelatedToSpecificUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumericIssuesRelatedToSpecificUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNumericIssuesRelatedToSpecificUser_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q26="DomainServices" name="detail" element="q26:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetOptionIssuesRelatedToSpecificUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOptionIssuesRelatedToSpecificUser" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetOptionIssuesRelatedToSpecificUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOptionIssuesRelatedToSpecificUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetOptionIssuesRelatedToSpecificUser_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q27="DomainServices" name="detail" element="q27:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetLaterRatedIssuesRelatedToSpecificUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLaterRatedIssuesRelatedToSpecificUser" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetLaterRatedIssuesRelatedToSpecificUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLaterRatedIssuesRelatedToSpecificUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetLaterRatedIssuesRelatedToSpecificUser_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q28="DomainServices" name="detail" element="q28:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_RetrieveApplicationDMStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveApplicationDMStatus" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_RetrieveApplicationDMStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveApplicationDMStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_RetrieveApplicationDMStatus_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q29="DomainServices" name="detail" element="q29:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_UpdateDataMatchingStatusInAddon_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDataMatchingStatusInAddon" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_UpdateDataMatchingStatusInAddon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDataMatchingStatusInAddonResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_UpdateDataMatchingStatusInAddon_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q30="DomainServices" name="detail" element="q30:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetOrganizationsForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganizationsForUser" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetOrganizationsForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganizationsForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetOrganizationsForUser_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q31="DomainServices" name="detail" element="q31:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetAvailableNegotiationsToAnalysis_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableNegotiationsToAnalysis" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetAvailableNegotiationsToAnalysis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableNegotiationsToAnalysisResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetAvailableNegotiationsToAnalysis_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q32="DomainServices" name="detail" element="q32:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNegotiationsByListOfIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNegotiationsByListOfIDs" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNegotiationsByListOfIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNegotiationsByListOfIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNegotiationsByListOfIDs_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q33="DomainServices" name="detail" element="q33:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetConversationsByNegotiationID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConversationsByNegotiationID" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetConversationsByNegotiationID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConversationsByNegotiationIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetConversationsByNegotiationID_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q34="DomainServices" name="detail" element="q34:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMessagesByNegotiationID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessagesByNegotiationID" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMessagesByNegotiationID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessagesByNegotiationIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMessagesByNegotiationID_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q35="DomainServices" name="detail" element="q35:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_SendAppsStatisticalsMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendAppsStatisticalsMessages" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_SendAppsStatisticalsMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendAppsStatisticalsMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_SendAppsStatisticalsMessages_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q36="DomainServices" name="detail" element="q36:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNegotiationPeriod_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNegotiationPeriod" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNegotiationPeriod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNegotiationPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNegotiationPeriod_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q37="DomainServices" name="detail" element="q37:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetConversationPeriod_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConversationPeriod" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetConversationPeriod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConversationPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetConversationPeriod_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q38="DomainServices" name="detail" element="q38:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetLastOfferForConversation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastOfferForConversation" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetLastOfferForConversation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastOfferForConversationResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetLastOfferForConversation_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q39="DomainServices" name="detail" element="q39:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNextExpectedTargetForNegotiation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextExpectedTargetForNegotiation" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNextExpectedTargetForNegotiation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextExpectedTargetForNegotiationResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNextExpectedTargetForNegotiation_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q40="DomainServices" name="detail" element="q40:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNextExpectedTargetForConversation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextExpectedTargetForConversation" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNextExpectedTargetForConversation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextExpectedTargetForConversationResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetNextExpectedTargetForConversation_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q41="DomainServices" name="detail" element="q41:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetCompletePreferenceSetForNegotiation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompletePreferenceSetForNegotiation" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetCompletePreferenceSetForNegotiation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompletePreferenceSetForNegotiationResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetCompletePreferenceSetForNegotiation_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q42="DomainServices" name="detail" element="q42:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetBaseOfferForNegotiation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBaseOfferForNegotiation" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetBaseOfferForNegotiation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBaseOfferForNegotiationResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetBaseOfferForNegotiation_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q43="DomainServices" name="detail" element="q43:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetBaseOfferForConversation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBaseOfferForConversation" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetBaseOfferForConversation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBaseOfferForConversationResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetBaseOfferForConversation_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q44="DomainServices" name="detail" element="q44:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetActionTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActionTypes" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetActionTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActionTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetActionTypes_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q45="DomainServices" name="detail" element="q45:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetConversationMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConversationMessages" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetConversationMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConversationMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetConversationMessages_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q46="DomainServices" name="detail" element="q46:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetHistories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistories" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetHistories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetHistories_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q47="DomainServices" name="detail" element="q47:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssues" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssues_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q48="DomainServices" name="detail" element="q48:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssueTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssueTypes" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssueTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssueTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetIssueTypes_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q49="DomainServices" name="detail" element="q49:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetLaterRatedIssues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLaterRatedIssues" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetLaterRatedIssues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLaterRatedIssuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetLaterRatedIssues_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q50="DomainServices" name="detail" element="q50:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMainPreferenceSets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMainPreferenceSets" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMainPreferenceSets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMainPreferenceSetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMainPreferenceSets_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q51="DomainServices" name="detail" element="q51:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMessageIssues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageIssues" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMessageIssues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageIssuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMessageIssues_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q52="DomainServices" name="detail" element="q52:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMessageLaterRatedIssues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageLaterRatedIssues" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMessageLaterRatedIssues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageLaterRatedIssuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMessageLaterRatedIssues_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q53="DomainServices" name="detail" element="q53:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMessageOptionIssues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageOptionIssues" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMessageOptionIssues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageOptionIssuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_GetMessageOptionIssues_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q54="DomainServices" name="detail" element="q54:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_SubmitChanges_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitChanges" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_SubmitChanges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitChangesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrefAppServiceSoap_SubmitChanges_DomainServiceFault_FaultMessage">
+    <wsdl:part xmlns:q55="DomainServices" name="detail" element="q55:DomainServiceFault" />
+  </wsdl:message>
+  <wsdl:portType name="PrefAppServiceSoap">
+    <wsdl:operation name="GetNegConversations">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNegConversations" message="tns:PrefAppServiceSoap_GetNegConversations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNegConversationsResponse" message="tns:PrefAppServiceSoap_GetNegConversations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNegConversationsDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetNegConversations_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumericIssues">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNumericIssues" message="tns:PrefAppServiceSoap_GetNumericIssues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNumericIssuesResponse" message="tns:PrefAppServiceSoap_GetNumericIssues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNumericIssuesDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetNumericIssues_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionIssues">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetOptionIssues" message="tns:PrefAppServiceSoap_GetOptionIssues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetOptionIssuesResponse" message="tns:PrefAppServiceSoap_GetOptionIssues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetOptionIssuesDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetOptionIssues_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreferenceSetNegs">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetNegs" message="tns:PrefAppServiceSoap_GetPreferenceSetNegs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetNegsResponse" message="tns:PrefAppServiceSoap_GetPreferenceSetNegs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetNegsDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetPreferenceSetNegs_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreferenceSetOrganizations">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetOrganizations" message="tns:PrefAppServiceSoap_GetPreferenceSetOrganizations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetOrganizationsResponse" message="tns:PrefAppServiceSoap_GetPreferenceSetOrganizations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetOrganizationsDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetPreferenceSetOrganizations_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreferenceSetForNegotiation">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetForNegotiation" message="tns:PrefAppServiceSoap_GetPreferenceSetForNegotiation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetForNegotiationResponse" message="tns:PrefAppServiceSoap_GetPreferenceSetForNegotiation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetForNegotiationDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetPreferenceSetForNegotiation_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIssuesForPreferenceSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssuesForPreferenceSet" message="tns:PrefAppServiceSoap_GetIssuesForPreferenceSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssuesForPreferenceSetResponse" message="tns:PrefAppServiceSoap_GetIssuesForPreferenceSet_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssuesForPreferenceSetDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetIssuesForPreferenceSet_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConversationScore">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetConversationScore" message="tns:PrefAppServiceSoap_GetConversationScore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetConversationScoreResponse" message="tns:PrefAppServiceSoap_GetConversationScore_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetConversationScoreDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetConversationScore_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGraphForNegotiation">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetGraphForNegotiation" message="tns:PrefAppServiceSoap_GetGraphForNegotiation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetGraphForNegotiationResponse" message="tns:PrefAppServiceSoap_GetGraphForNegotiation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetGraphForNegotiationDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetGraphForNegotiation_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGraphForConversation">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetGraphForConversation" message="tns:PrefAppServiceSoap_GetGraphForConversation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetGraphForConversationResponse" message="tns:PrefAppServiceSoap_GetGraphForConversation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetGraphForConversationDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetGraphForConversation_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMinValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMinValue" message="tns:PrefAppServiceSoap_GetMinValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMinValueResponse" message="tns:PrefAppServiceSoap_GetMinValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMinValueDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetMinValue_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMaxValue" message="tns:PrefAppServiceSoap_GetMaxValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMaxValueResponse" message="tns:PrefAppServiceSoap_GetMaxValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMaxValueDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetMaxValue_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPossibleValues">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPossibleValues" message="tns:PrefAppServiceSoap_GetPossibleValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPossibleValuesResponse" message="tns:PrefAppServiceSoap_GetPossibleValues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPossibleValuesDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetPossibleValues_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValueOfIssue">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetValueOfIssue" message="tns:PrefAppServiceSoap_GetValueOfIssue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetValueOfIssueResponse" message="tns:PrefAppServiceSoap_GetValueOfIssue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetValueOfIssueDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetValueOfIssue_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastValueOfIssue">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetLastValueOfIssue" message="tns:PrefAppServiceSoap_GetLastValueOfIssue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetLastValueOfIssueResponse" message="tns:PrefAppServiceSoap_GetLastValueOfIssue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetLastValueOfIssueDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetLastValueOfIssue_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNextOfferID">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNextOfferID" message="tns:PrefAppServiceSoap_GetNextOfferID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNextOfferIDResponse" message="tns:PrefAppServiceSoap_GetNextOfferID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNextOfferIDDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetNextOfferID_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetValueOfIssue">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/SetValueOfIssue" message="tns:PrefAppServiceSoap_SetValueOfIssue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/SetValueOfIssueResponse" message="tns:PrefAppServiceSoap_SetValueOfIssue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/SetValueOfIssueDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_SetValueOfIssue_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OfferFinished">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/OfferFinished" message="tns:PrefAppServiceSoap_OfferFinished_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/OfferFinishedResponse" message="tns:PrefAppServiceSoap_OfferFinished_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/OfferFinishedDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_OfferFinished_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIssuesHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssuesHistory" message="tns:PrefAppServiceSoap_GetIssuesHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssuesHistoryResponse" message="tns:PrefAppServiceSoap_GetIssuesHistory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssuesHistoryDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetIssuesHistory_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIssuesHistoryByNegID">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssuesHistoryByNegID" message="tns:PrefAppServiceSoap_GetIssuesHistoryByNegID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssuesHistoryByNegIDResponse" message="tns:PrefAppServiceSoap_GetIssuesHistoryByNegID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssuesHistoryByNegIDDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetIssuesHistoryByNegID_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueStatisticals">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssueStatisticals" message="tns:PrefAppServiceSoap_GetIssueStatisticals_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssueStatisticalsResponse" message="tns:PrefAppServiceSoap_GetIssueStatisticals_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssueStatisticalsDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetIssueStatisticals_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreferenceSetsForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetsForUser" message="tns:PrefAppServiceSoap_GetPreferenceSetsForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetsForUserResponse" message="tns:PrefAppServiceSoap_GetPreferenceSetsForUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetsForUserDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetPreferenceSetsForUser_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreferenceSetsByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetsByID" message="tns:PrefAppServiceSoap_GetPreferenceSetsByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetsByIDResponse" message="tns:PrefAppServiceSoap_GetPreferenceSetsByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetsByIDDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetPreferenceSetsByID_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreferenceSetOrganizationsForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetOrganizationsForUser" message="tns:PrefAppServiceSoap_GetPreferenceSetOrganizationsForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetOrganizationsForUserResponse" message="tns:PrefAppServiceSoap_GetPreferenceSetOrganizationsForUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetOrganizationsForUserDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetPreferenceSetOrganizationsForUser_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIssuesRelatedToSpecificUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssuesRelatedToSpecificUser" message="tns:PrefAppServiceSoap_GetIssuesRelatedToSpecificUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssuesRelatedToSpecificUserResponse" message="tns:PrefAppServiceSoap_GetIssuesRelatedToSpecificUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssuesRelatedToSpecificUserDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetIssuesRelatedToSpecificUser_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumericIssuesRelatedToSpecificUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNumericIssuesRelatedToSpecificUser" message="tns:PrefAppServiceSoap_GetNumericIssuesRelatedToSpecificUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNumericIssuesRelatedToSpecificUserResponse" message="tns:PrefAppServiceSoap_GetNumericIssuesRelatedToSpecificUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNumericIssuesRelatedToSpecificUserDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetNumericIssuesRelatedToSpecificUser_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionIssuesRelatedToSpecificUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetOptionIssuesRelatedToSpecificUser" message="tns:PrefAppServiceSoap_GetOptionIssuesRelatedToSpecificUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetOptionIssuesRelatedToSpecificUserResponse" message="tns:PrefAppServiceSoap_GetOptionIssuesRelatedToSpecificUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetOptionIssuesRelatedToSpecificUserDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetOptionIssuesRelatedToSpecificUser_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLaterRatedIssuesRelatedToSpecificUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetLaterRatedIssuesRelatedToSpecificUser" message="tns:PrefAppServiceSoap_GetLaterRatedIssuesRelatedToSpecificUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetLaterRatedIssuesRelatedToSpecificUserResponse" message="tns:PrefAppServiceSoap_GetLaterRatedIssuesRelatedToSpecificUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetLaterRatedIssuesRelatedToSpecificUserDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetLaterRatedIssuesRelatedToSpecificUser_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveApplicationDMStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/RetrieveApplicationDMStatus" message="tns:PrefAppServiceSoap_RetrieveApplicationDMStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/RetrieveApplicationDMStatusResponse" message="tns:PrefAppServiceSoap_RetrieveApplicationDMStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/RetrieveApplicationDMStatusDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_RetrieveApplicationDMStatus_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDataMatchingStatusInAddon">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/UpdateDataMatchingStatusInAddon" message="tns:PrefAppServiceSoap_UpdateDataMatchingStatusInAddon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/UpdateDataMatchingStatusInAddonResponse" message="tns:PrefAppServiceSoap_UpdateDataMatchingStatusInAddon_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/UpdateDataMatchingStatusInAddonDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_UpdateDataMatchingStatusInAddon_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganizationsForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetOrganizationsForUser" message="tns:PrefAppServiceSoap_GetOrganizationsForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetOrganizationsForUserResponse" message="tns:PrefAppServiceSoap_GetOrganizationsForUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetOrganizationsForUserDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetOrganizationsForUser_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableNegotiationsToAnalysis">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetAvailableNegotiationsToAnalysis" message="tns:PrefAppServiceSoap_GetAvailableNegotiationsToAnalysis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetAvailableNegotiationsToAnalysisResponse" message="tns:PrefAppServiceSoap_GetAvailableNegotiationsToAnalysis_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetAvailableNegotiationsToAnalysisDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetAvailableNegotiationsToAnalysis_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNegotiationsByListOfIDs">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNegotiationsByListOfIDs" message="tns:PrefAppServiceSoap_GetNegotiationsByListOfIDs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNegotiationsByListOfIDsResponse" message="tns:PrefAppServiceSoap_GetNegotiationsByListOfIDs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNegotiationsByListOfIDsDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetNegotiationsByListOfIDs_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConversationsByNegotiationID">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetConversationsByNegotiationID" message="tns:PrefAppServiceSoap_GetConversationsByNegotiationID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetConversationsByNegotiationIDResponse" message="tns:PrefAppServiceSoap_GetConversationsByNegotiationID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetConversationsByNegotiationIDDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetConversationsByNegotiationID_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessagesByNegotiationID">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMessagesByNegotiationID" message="tns:PrefAppServiceSoap_GetMessagesByNegotiationID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMessagesByNegotiationIDResponse" message="tns:PrefAppServiceSoap_GetMessagesByNegotiationID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMessagesByNegotiationIDDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetMessagesByNegotiationID_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendAppsStatisticalsMessages">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/SendAppsStatisticalsMessages" message="tns:PrefAppServiceSoap_SendAppsStatisticalsMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/SendAppsStatisticalsMessagesResponse" message="tns:PrefAppServiceSoap_SendAppsStatisticalsMessages_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/SendAppsStatisticalsMessagesDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_SendAppsStatisticalsMessages_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNegotiationPeriod">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNegotiationPeriod" message="tns:PrefAppServiceSoap_GetNegotiationPeriod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNegotiationPeriodResponse" message="tns:PrefAppServiceSoap_GetNegotiationPeriod_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNegotiationPeriodDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetNegotiationPeriod_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConversationPeriod">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetConversationPeriod" message="tns:PrefAppServiceSoap_GetConversationPeriod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetConversationPeriodResponse" message="tns:PrefAppServiceSoap_GetConversationPeriod_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetConversationPeriodDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetConversationPeriod_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastOfferForConversation">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetLastOfferForConversation" message="tns:PrefAppServiceSoap_GetLastOfferForConversation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetLastOfferForConversationResponse" message="tns:PrefAppServiceSoap_GetLastOfferForConversation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetLastOfferForConversationDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetLastOfferForConversation_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNextExpectedTargetForNegotiation">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNextExpectedTargetForNegotiation" message="tns:PrefAppServiceSoap_GetNextExpectedTargetForNegotiation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNextExpectedTargetForNegotiationResponse" message="tns:PrefAppServiceSoap_GetNextExpectedTargetForNegotiation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNextExpectedTargetForNegotiationDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetNextExpectedTargetForNegotiation_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNextExpectedTargetForConversation">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNextExpectedTargetForConversation" message="tns:PrefAppServiceSoap_GetNextExpectedTargetForConversation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNextExpectedTargetForConversationResponse" message="tns:PrefAppServiceSoap_GetNextExpectedTargetForConversation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetNextExpectedTargetForConversationDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetNextExpectedTargetForConversation_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletePreferenceSetForNegotiation">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetCompletePreferenceSetForNegotiation" message="tns:PrefAppServiceSoap_GetCompletePreferenceSetForNegotiation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetCompletePreferenceSetForNegotiationResponse" message="tns:PrefAppServiceSoap_GetCompletePreferenceSetForNegotiation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetCompletePreferenceSetForNegotiationDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetCompletePreferenceSetForNegotiation_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseOfferForNegotiation">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetBaseOfferForNegotiation" message="tns:PrefAppServiceSoap_GetBaseOfferForNegotiation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetBaseOfferForNegotiationResponse" message="tns:PrefAppServiceSoap_GetBaseOfferForNegotiation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetBaseOfferForNegotiationDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetBaseOfferForNegotiation_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseOfferForConversation">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetBaseOfferForConversation" message="tns:PrefAppServiceSoap_GetBaseOfferForConversation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetBaseOfferForConversationResponse" message="tns:PrefAppServiceSoap_GetBaseOfferForConversation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetBaseOfferForConversationDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetBaseOfferForConversation_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActionTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetActionTypes" message="tns:PrefAppServiceSoap_GetActionTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetActionTypesResponse" message="tns:PrefAppServiceSoap_GetActionTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetActionTypesDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetActionTypes_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConversationMessages">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetConversationMessages" message="tns:PrefAppServiceSoap_GetConversationMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetConversationMessagesResponse" message="tns:PrefAppServiceSoap_GetConversationMessages_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetConversationMessagesDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetConversationMessages_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistories">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetHistories" message="tns:PrefAppServiceSoap_GetHistories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetHistoriesResponse" message="tns:PrefAppServiceSoap_GetHistories_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetHistoriesDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetHistories_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIssues">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssues" message="tns:PrefAppServiceSoap_GetIssues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssuesResponse" message="tns:PrefAppServiceSoap_GetIssues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssuesDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetIssues_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssueTypes" message="tns:PrefAppServiceSoap_GetIssueTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssueTypesResponse" message="tns:PrefAppServiceSoap_GetIssueTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetIssueTypesDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetIssueTypes_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLaterRatedIssues">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetLaterRatedIssues" message="tns:PrefAppServiceSoap_GetLaterRatedIssues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetLaterRatedIssuesResponse" message="tns:PrefAppServiceSoap_GetLaterRatedIssues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetLaterRatedIssuesDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetLaterRatedIssues_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMainPreferenceSets">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMainPreferenceSets" message="tns:PrefAppServiceSoap_GetMainPreferenceSets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMainPreferenceSetsResponse" message="tns:PrefAppServiceSoap_GetMainPreferenceSets_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMainPreferenceSetsDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetMainPreferenceSets_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageIssues">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMessageIssues" message="tns:PrefAppServiceSoap_GetMessageIssues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMessageIssuesResponse" message="tns:PrefAppServiceSoap_GetMessageIssues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMessageIssuesDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetMessageIssues_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageLaterRatedIssues">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMessageLaterRatedIssues" message="tns:PrefAppServiceSoap_GetMessageLaterRatedIssues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMessageLaterRatedIssuesResponse" message="tns:PrefAppServiceSoap_GetMessageLaterRatedIssues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMessageLaterRatedIssuesDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetMessageLaterRatedIssues_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageOptionIssues">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMessageOptionIssues" message="tns:PrefAppServiceSoap_GetMessageOptionIssues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMessageOptionIssuesResponse" message="tns:PrefAppServiceSoap_GetMessageOptionIssues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/GetMessageOptionIssuesDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_GetMessageOptionIssues_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitChanges">
+      <wsdl:input wsaw:Action="http://tempuri.org/PrefAppServiceSoap/SubmitChanges" message="tns:PrefAppServiceSoap_SubmitChanges_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/PrefAppServiceSoap/SubmitChangesResponse" message="tns:PrefAppServiceSoap_SubmitChanges_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/PrefAppServiceSoap/SubmitChangesDomainServiceFault" name="DomainServiceFault" message="tns:PrefAppServiceSoap_SubmitChanges_DomainServiceFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_PrefAppServiceSoap" type="tns:PrefAppServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetNegConversations">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetNegConversations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumericIssues">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetNumericIssues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionIssues">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetOptionIssues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreferenceSetNegs">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetNegs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreferenceSetOrganizations">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetOrganizations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreferenceSetForNegotiation">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetForNegotiation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetIssuesForPreferenceSet">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetIssuesForPreferenceSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetConversationScore">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetConversationScore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetGraphForNegotiation">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetGraphForNegotiation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetGraphForConversation">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetGraphForConversation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMinValue">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetMinValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxValue">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetMaxValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPossibleValues">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetPossibleValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetValueOfIssue">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetValueOfIssue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastValueOfIssue">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetLastValueOfIssue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextOfferID">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetNextOfferID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetValueOfIssue">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/SetValueOfIssue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="OfferFinished">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/OfferFinished" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetIssuesHistory">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetIssuesHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetIssuesHistoryByNegID">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetIssuesHistoryByNegID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueStatisticals">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetIssueStatisticals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreferenceSetsForUser">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetsForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreferenceSetsByID">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetsByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreferenceSetOrganizationsForUser">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetPreferenceSetOrganizationsForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetIssuesRelatedToSpecificUser">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetIssuesRelatedToSpecificUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumericIssuesRelatedToSpecificUser">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetNumericIssuesRelatedToSpecificUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionIssuesRelatedToSpecificUser">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetOptionIssuesRelatedToSpecificUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLaterRatedIssuesRelatedToSpecificUser">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetLaterRatedIssuesRelatedToSpecificUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveApplicationDMStatus">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/RetrieveApplicationDMStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDataMatchingStatusInAddon">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/UpdateDataMatchingStatusInAddon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganizationsForUser">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetOrganizationsForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableNegotiationsToAnalysis">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetAvailableNegotiationsToAnalysis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNegotiationsByListOfIDs">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetNegotiationsByListOfIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetConversationsByNegotiationID">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetConversationsByNegotiationID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessagesByNegotiationID">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetMessagesByNegotiationID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendAppsStatisticalsMessages">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/SendAppsStatisticalsMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNegotiationPeriod">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetNegotiationPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetConversationPeriod">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetConversationPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastOfferForConversation">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetLastOfferForConversation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextExpectedTargetForNegotiation">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetNextExpectedTargetForNegotiation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextExpectedTargetForConversation">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetNextExpectedTargetForConversation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletePreferenceSetForNegotiation">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetCompletePreferenceSetForNegotiation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseOfferForNegotiation">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetBaseOfferForNegotiation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseOfferForConversation">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetBaseOfferForConversation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetActionTypes">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetActionTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetConversationMessages">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetConversationMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistories">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetHistories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetIssues">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetIssues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueTypes">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetIssueTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLaterRatedIssues">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetLaterRatedIssues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMainPreferenceSets">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetMainPreferenceSets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageIssues">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetMessageIssues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageLaterRatedIssues">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetMessageLaterRatedIssues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageOptionIssues">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/GetMessageOptionIssues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitChanges">
+      <soap:operation soapAction="http://tempuri.org/PrefAppServiceSoap/SubmitChanges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DomainServiceFault">
+        <soap:fault use="literal" name="DomainServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PrefAppService">
+    <wsdl:port name="BasicHttpBinding_PrefAppServiceSoap" binding="tns:BasicHttpBinding_PrefAppServiceSoap">
+      <soap:address location="http://localhost:9002/Services/citPOINT-PrefApp-Data-Web-PrefAppService.svc/Soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
